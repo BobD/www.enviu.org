@@ -10,8 +10,9 @@ module.exports = function(grunt) {
 		var data = grunt.option('data');
 		var partialName, partialHTML, dir, dir;
 
+		grunt.log.error('test');
+
 		Handlebars.registerHelper('menu_active', function(a, b) {
-			console.log(a, b);
 			return (a == b) ? "class='active'" : '';
 		});
 

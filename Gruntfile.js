@@ -1,6 +1,8 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  require('logfile-grunt')(grunt, { clearLogFile: true });
+
   // Project configuration.
   grunt.initConfig({
     // Metadata.
