@@ -150,7 +150,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('desktop', ['clean:desktop', 'copy:desktop', 'data:desktop', 'sass:desktop', 'autoprefixer:desktop', 'cssmin:desktop', 'html:desktop']);
-  grunt.registerTask('mobile', ['clean:desktop', 'copy:desktop', 'data:mobile', 'sass:mobile', 'autoprefixer:mobile', 'cssmin:mobile', 'html:mobile']);
+  grunt.registerTask('mobile', ['clean:mobile', 'copy:mobile', 'data:mobile', 'sass:mobile', 'autoprefixer:mobile', 'cssmin:mobile', 'html:mobile']);
   grunt.registerTask('default', ['desktop', 'mobile', 'copy:dist']);
 
 };
