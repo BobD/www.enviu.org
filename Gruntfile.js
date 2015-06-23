@@ -59,12 +59,18 @@ module.exports = function(grunt) {
         files: {
           'build/desktop/css/style.min.css': ['build/desktop/css/style.css']
         }
+      },
+      mobile: {
+        files: {
+          'build/mobile/css/style.min.css': ['build/mobile/css/style.css']
+        }
       }
     },
 
     // https://github.com/gruntjs/grunt-contrib-clean
     clean: {
-      build: ['build', 'dist']
+      desktop: ['build/desktop', 'dist/desktop'],
+      mobile: ['build/mobile', 'dist/mobile']
     },
 
     // https://github.com/gruntjs/grunt-contrib-sass
@@ -124,17 +130,13 @@ module.exports = function(grunt) {
       options: {
         livereload: true
       },
-      src: {
-        files: 'src/**/*.*',
-        tasks: ['default']
+      desktop: {
+        files: ['src/desktop/**/*.*', 'Gruntfile.js', 'tasks/**/*.js'],
+        tasks: ['desktop']
       },
-      gruntfile: {
-        files: 'Gruntfile.js',
-        tasks: ['default']
-      },
-      tasks: {
-        files: 'tasks/**/*.js',
-        tasks: ['default']
+      mobile: {
+        files: ['src/mobile/**/*.*', 'Gruntfile.js', 'tasks/**/*.js'],
+        tasks: ['mobile']
       }
     }
 
@@ -145,7 +147,8 @@ module.exports = function(grunt) {
   // https://www.npmjs.org/package/load-grunt-tasks
   require('load-grunt-tasks')(grunt);
 
-  // Default task.
-  grunt.registerTask('default', ['clean', 'copy:desktop', 'copy:mobile', 'data', 'sass', 'autoprefixer', 'cssmin', 'html:desktop', 'html:mobile', 'copy:dist']);
+  grunt.registerTask('desktop', ['clean:desktop', 'copy:desktop', 'data:desktop', 'sass:desktop', 'autoprefixer:desktop', 'cssmin:desktop', 'html:desktop']);
+  grunt.registerTask('mobile', ['clean:desktop', 'copy:desktop', 'data:mobile', 'sass:mobile', 'autoprefixer:mobile', 'cssmin:mobile', 'html:mobile']);
+  grunt.registerTask('default', ['desktop', 'mobile', 'copy:dist']);
 
 };

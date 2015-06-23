@@ -3,8 +3,8 @@ module.exports = function(grunt) {
 	var path  = require('path');
 	var data = {}
 
-	grunt.registerTask('data', 'Loads testing data', function() {
-		var dataFiles = grunt.file.expand('src/data/*.json');
+	grunt.registerTask('data', 'Loads testing data', function(target) {
+		var dataFiles = grunt.file.expand('src/' + target +'/data/*.json');
 		var id, json;
 
 		_.each(dataFiles, function(file){
@@ -15,5 +15,4 @@ module.exports = function(grunt) {
 
 		grunt.option('data', data);
 	});
-
 };

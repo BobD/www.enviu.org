@@ -20,7 +20,6 @@ require([
 	'section',
 	'fastclick'
 	], function(domReady, $, section, FastClick) {
-	console.log('go', $('html'));
 
 	$('html').removeClass('no-js').addClass('js');
 
