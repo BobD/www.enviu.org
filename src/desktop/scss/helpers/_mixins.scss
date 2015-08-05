@@ -1,4 +1,4 @@
-@mixin link(){
+@mixin links(){
 
   a{
     text-decoration: none;
@@ -7,58 +7,42 @@
     // transition: color 0.05s;
 
     &:hover{
-      color: $active-link-color;
+      color: $black;
     }
   }
 
 	&[class$="active"]{
-		color: $active-link-color;
+		color: $black;
 	}
 }
 
-@mixin text-link($color: $text-color-dark){
-  a[href]{
-    text-decoration: none;
-    color: $color;
-    position: relative;
-    display: inline-block;
+// http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+@mixin box-ratio($ratio: $box-ratio, $content: '.box__content'){
+  position: relative;
+  
+  &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: $ratio;
+  }
 
-    // http://codepen.io/acusti/pen/gbabKQ
-    // background-image: linear-gradient(rgba(#000, 0.25) 0%, #000 100%);
-    // background-repeat: repeat-x;
-    // background-size: 1px 1px;
-    // background-position: 0 78%;
-    // text-shadow: 3px 0 #83afb0, 2px 0 #83afb0, 1px 0 #83afb0, -1px 0 #83afb0, -2px 0 #83afb0, -3px 0 #83afb0;
-
-    &:before{
-      content: '';
-      display: inline-block;
-      position: absolute;
-      bottom: 3px;
-      left: 0;
-      right: 0;
-      border-bottom: thin solid $color;
-    }
+  > #{$content}{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 
-@mixin box-padding($side_multiplier: 1){
-  padding: emRhythm(1) emRhythm($side_multiplier);
-}
-
-@mixin box-style($side_multiplier: 1){
-  @include box-padding($side_multiplier);
-}
-
-// http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
-@mixin tweak-points($point) {
-
-  @if $point == small {
-    @media (max-width: 1600px) { @content; }
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
   }
-
 }
-
 
 
 // ----
@@ -92,43 +76,5 @@
     @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
         + "Please make sure it is defined in `$breakpoints` map. "
         + "Or pass the media query as a second parameter to add it to the map.";
-  }
-}
-
-@mixin vertical-dash(){
-  &:after{
-    content: '';
-    display: inline-block;
-    height: emRhythm(3);
-    border-right: thin solid white;
-    vertical-align: middle;
-    margin: 0 3px;
-  }
-
-  &:last-child{
-    &:after{
-      display: none;
-    }
-  }
-}
-
-@mixin horizontal-dash($bottom: - emRhythm(0.5)){
-  position: relative;
-  &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: $bottom;
-    left: 0;
-    right: 0;
-    border-bottom: thin solid white;
-  }
-}
-
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 }

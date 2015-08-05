@@ -24,11 +24,12 @@
 // Use this variables to customize your Typesettings. Or take the whole thing
 // apart if you want :)
 
+// BOB::20150805, see base/_typo.scss
 // Font families and default text color.
-$font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
-$font-serif: Georgia, 'Times New Roman', serif !default;
-$font-mono: 'Lucida Console', Monaco, monospace !default;
-$text-color: #000 !default;
+// $font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+// $font-serif: Georgia, 'Times New Roman', serif !default;
+// $font-mono: 'Lucida Console', Monaco, monospace !default;
+// $text-color: #000 !default;
 
 // The vertical grid unit. Margin, padding, and line-height are set to multiples
 // of this value. This is the value that determines the baseline for our vertical
@@ -180,16 +181,4 @@ $ms-up4: $ms-up3 * $ms-ratio; // [7]
     display: block;
     pointer-events: none;
   }
-}
-
-// Sets the font-size of the project as a percentage. Making it easy to
-// scale up/down the whole project for specific media queries
-html {
-  font-size: ($base-font-size / 16px) * 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  @include setLeading();
 }

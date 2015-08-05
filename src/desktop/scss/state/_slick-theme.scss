@@ -1,0 +1,49 @@
+
+// BOB:20150727, some overrides to make slick work
+// http://kenwheeler.github.io/slick/
+.slick-list,
+.slick-track{
+    height: 100%;
+}
+
+.slick-arrow{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    margin-top: -3em;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: transparent;
+    width: 4em;
+    text-align: center;
+    opacity: .75;
+    transition: all $transition-duration;
+
+
+    &:before{
+        font-family: FontAwesome;
+        color: white;
+        font-size: 4em;
+    }
+
+    &:hover{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.slick-prev{
+    left: 15px;
+    &:before{
+        content: '\f053';
+    }
+}
+
+.slick-next{
+    right: 15px;
+        &:before{
+        content: '\f054';
+    }
+}

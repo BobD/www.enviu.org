@@ -1,0 +1,7 @@
+.section{
+	margin: $section-vertical-padding 0;
+}
+
+.section__header{
+	@include setType(8, $ms-up3);
+}

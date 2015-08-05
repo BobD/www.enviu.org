@@ -1,3 +1,7 @@
 .footer{
+	background: $black;
+	color: $white;
+	min-height: 100px;
 
+	@include links();
 }

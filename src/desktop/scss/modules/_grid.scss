@@ -1,0 +1,156 @@
+%grid-column{
+	.grid__item{
+		height: auto;
+
+		@include box-ratio(100%, '.grid__item-content');
+
+		.grid__item-content{
+			width: auto;
+			height: auto;
+
+			top: $grid__item-padding;
+			right: $grid__item-padding;
+			bottom: $grid__item-padding;
+			left: $grid__item-padding;
+		}
+	}
+}
+
+%grid-column-1{
+	@extend %grid-column;
+	.grid__item{width: 100%;}
+}
+
+%grid-column-2{
+	@extend %grid-column;
+	.grid__item{width: 50%;}
+}
+
+%grid-column-3{
+	@extend %grid-column;
+	.grid__item{width: 33.33%;}
+}
+
+%grid-column-4{
+	@extend %grid-column;
+	.grid__item{width: 20%;}
+}
+
+%grid-column-5{
+	@extend %grid-column;
+	.grid__item{width: 20%;}
+}
+
+%grid-column-6{
+	@extend %grid-column;
+	.grid__item{width: 16.66%;}
+}
+
+%grid-column-7{
+	@extend %grid-column;
+	.grid__item{width: 14.28%;}
+}
+
+%grid-column-8{
+	@extend %grid-column;
+	.grid__item{width: 12.50%;}
+}
+
+%grid-column-9{
+	@extend %grid-column;
+	.grid__item{width: 11.11%;}
+}
+
+%grid-column-10{
+	@extend %grid-column;
+	.grid__item{width: 10%;}
+}
+
+.grid{
+	position: relative;
+	overflow: hidden;
+	margin-left: -$grid__item-padding;
+	margin-right: -$grid__item-padding;
+
+	&-column-1{
+		@extend %grid-column-1;
+	}
+
+	&-column-2{
+		@extend %grid-column-2;
+	}
+
+	&-column-3{
+		@extend %grid-column-3;
+	}
+
+	&-column-4{
+		@extend %grid-column-4;
+	}
+
+	&-column-5{
+		@extend %grid-column-5;
+	}
+
+	&-column-6{
+		@extend %grid-column-6;
+	}
+
+	&-column-7{
+		@extend %grid-column-7;
+	}
+
+	&-column-8{
+		@extend %grid-column-8;
+	}
+
+	&-column-9{
+		@extend %grid-column-9;
+	}
+
+	&-column-10{
+		@extend %grid-column-10;
+	}
+}
+
+.grid__item{
+	width: 100px;
+	height: 100px;
+	padding: $grid__item-padding;
+	float: left;
+	position: relative;
+}
+
+.grid__item-content{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.grid__image{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-repeat: none;
+	background-size: cover;
+	background-position: center center;
+}
+
+.grid__info{
+
+}
+
+// Annoying that you cannot extend out of scope of the media query..
+@include respond-to(mobile) {
+	.grid{
+		.grid__item{width: 100%;}
+	}
+}
+
+@include respond-to(small) {
+	.grid{
+		.grid__item{width: 33.33%;}
+	}
+}

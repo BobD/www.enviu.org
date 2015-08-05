@@ -3,5 +3,38 @@
 		{"title": "home", "url": "/"},
 		{"title": "about", "url": "/about/"},
 		{"title": "contact", "url": "/contact/"}
+	],
+
+	"leaderboard": [
+		{"title": "Safe and Sustainable Sanitation",  "url": "", "image": "images/leaderboard/leaderboard-1.jpg"},
+		{"title": "Safe and Sustainable Sanitation",  "url": "", "image": "images/leaderboard/leaderboard-1.jpg"}
+	],
+
+	"featured": [
+		{"title": "Safe and Sustainable Sanitation",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "3DfromWaste",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Yebo!",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Taka Taka Challenge",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Agri-Business Innovation Challenge",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Plug & Ride",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Otter Challenge",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Outside Inc.",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Janta Meals",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Discovered",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
+		{"title": "Micro Pensions",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"}
+	],
+
+	"team": [
+		{"title": "Team member 1",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 2",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 3",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 4",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 5",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 6",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 7",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 8",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 9",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 10",  "url": "", "image": "images/grid/grid-1.jpg"},
+		{"title": "Team member 11",  "url": "", "image": "images/grid/grid-1.jpg"}
 	]
 }

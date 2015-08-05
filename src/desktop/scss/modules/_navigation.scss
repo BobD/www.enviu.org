@@ -1,5 +1,17 @@
 .navigation{
-	> ul{
+	background-color: $theme;
+	color: $white;
+}
 
-	}
+.navigation__list{
+
+}
+
+.navigation__item{
+	display: inline-block;
+
+	@include links();
+}
+
+.navigation__link{
 }

@@ -1,4 +1,68 @@
-// @import "helpers/variables";
-// @import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/mixins";
 
 //  A collection of development only styles, these will be generated dynamically with the backend on production
+
+@include respond-to(mobile) {
+	body{
+		&:before{
+			content: 'mobile';
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			color: black;
+			background: yellow;
+			padding: 5px 10px;
+			border: thin solid black;
+		}
+	}
+}
+
+@include respond-to(small) {
+	body{
+		&:before{
+			content: 'small';
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			color: black;
+			background: yellow;
+			padding: 5px 10px;
+			border: thin solid black;
+		}
+	}
+}
+
+@include respond-to(medium) {
+	body{
+		&:before{
+			content: 'medium';
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			color: black;
+			background: yellow;
+			padding: 5px 10px;
+			border: thin solid black;
+		}
+	}
+}
+
+@include respond-to(large) {
+	body{
+		&:before{
+			content: 'large';
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			color: black;
+			background: yellow;
+			padding: 5px 10px;
+			border: thin solid black;
+		}
+	}
+}

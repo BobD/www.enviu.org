@@ -1,0 +1,11 @@
+.box{
+
+}
+
+.box--ratio{
+	@include box-ratio();
+}
+
+.box--padding{
+	padding: $vertical-padding $horizontal-padding $vertical-padding $horizontal-padding;
+}

@@ -1,0 +1,25 @@
+<section class='leaderboard box--ratio'>
+
+	<div class='leaderboard__content box__content'>
+
+		<ul class='leaderboard__list slick-leaderboard'>
+			{{#each items}}
+			<li class='leaderboard__image' style='background-image: url("{{image}}")'></li>
+			{{/each}}
+	
+			<li class='leaderboard__video'>
+				<iframe src="https://player.vimeo.com/video/133980807?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</li>
+		</ul>
+		
+		<div class='leaderboard__nav leaderboard__previous'>
+			<i class='fa fa-chevron-left'></i>
+		</div>
+
+		<div class='leaderboard__nav leaderboard__next'>
+			<i class='fa fa-chevron-right'></i>
+		</div>
+
+	</div>
+
+</section>
