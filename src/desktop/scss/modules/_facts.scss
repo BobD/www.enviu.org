@@ -1,0 +1,27 @@
+.facts{
+	text-align: center;
+}
+
+.facts__visual{
+	display: inline-block;
+	position: relative;
+	margin: .5em;
+
+	&--one{
+		width: 20%;
+		top: 4em;
+	}
+
+	&--two{
+		width: 25%;
+	}
+
+	&--three{
+		width: 30%;
+	}
+
+	&--four{
+		width: 40%;
+		left: 3%;
+	}
+}

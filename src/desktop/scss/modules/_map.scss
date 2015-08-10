@@ -1,0 +1,8 @@
+.map{
+	background-color: $grey;
+	@include box-ratio(35%, '.map-container');
+}
+
+.map-container{
+
+}

@@ -1,0 +1,37 @@
+.excerpt{
+	overflow: hidden;
+	background-color: #F7F7F7;
+
+	&--right{
+		background-color: transparent;
+		.excerpt__image-container{
+			float: right;
+		}
+	}
+}
+
+.excerpt__image-container{
+	float: left;
+	width: 33%;
+
+	@include box-ratio(100%, '.excerpt__image');
+}
+
+.excerpt__image{
+	background-size: cover;
+	background-position: center center;
+	background-color: #8E8E8E;
+	border-radius: 6px;
+}
+
+.excerpt__content{
+	display: block;
+	overflow: hidden;
+	float: none;
+	padding: 3em 4em;
+	height: 100%;
+
+	.article__header{
+		@include setType(4, $ms-up1);
+	}
+}

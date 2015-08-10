@@ -6,11 +6,11 @@
 @include respond-to(mobile) {
 	body{
 		&:before{
-			content: 'mobile';
+			content: 'mobile screen';
 			display: block;
 			position: fixed;
-			top: 0;
-			left: 0;
+			bottom: 0;
+			right: 0;
 			color: black;
 			background: yellow;
 			padding: 5px 10px;
@@ -22,11 +22,11 @@
 @include respond-to(small) {
 	body{
 		&:before{
-			content: 'small';
+			content: 'small screen';
 			display: block;
 			position: fixed;
-			top: 0;
-			left: 0;
+			bottom: 0;
+			right: 0;
 			color: black;
 			background: yellow;
 			padding: 5px 10px;
@@ -38,11 +38,11 @@
 @include respond-to(medium) {
 	body{
 		&:before{
-			content: 'medium';
+			content: 'medium screen';
 			display: block;
 			position: fixed;
-			top: 0;
-			left: 0;
+			bottom: 0;
+			right: 0;
 			color: black;
 			background: yellow;
 			padding: 5px 10px;
@@ -54,11 +54,11 @@
 @include respond-to(large) {
 	body{
 		&:before{
-			content: 'large';
+			content: 'large screen';
 			display: block;
 			position: fixed;
-			top: 0;
-			left: 0;
+			bottom: 0;
+			right: 0;
 			color: black;
 			background: yellow;
 			padding: 5px 10px;

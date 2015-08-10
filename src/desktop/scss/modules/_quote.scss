@@ -1,0 +1,48 @@
+.quote{
+	text-align: center;
+
+	&:before,
+	&:after{
+		content: '';
+		display: inline-block;
+		width: 25%;
+		border-top: thin solid $theme;
+		margin: 1em 0;
+	}
+
+	&:after{
+		margin: 3em 0;
+	}
+}
+
+.quote__header{
+	color: $theme;
+	font-weight: 700;
+	margin-bottom: 1em;
+}
+
+.quote__body{
+	@include setType(6, $ms-up2);
+	margin-bottom: .5em;
+}
+
+.quote__footer{
+}
+
+.quote__person,
+.quote__source{
+	@include setType(4, $ms-up1);
+	display: inline-block;
+}
+
+.quote__person{
+
+}
+
+.quote__source{
+	font-weight: 700;
+}
+
+.quote__button{
+	margin-top: 1em;
+}

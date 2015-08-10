@@ -34,7 +34,7 @@ require([
 
 	  	$('.slick-caroussel').slick({
 		  	lazyLoad: 'ondemand',
-		  	slidesToShow: 3,
+		  	slidesToShow: 4,
 		  	slidesToScroll: 1,
 		  	responsive: [
 			    {

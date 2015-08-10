@@ -1,0 +1,13 @@
+.form{
+
+}
+
+.form__input,
+.form__textarea{
+	margin-bottom: 1.1em;
+	border-radius: 4px;
+	border: thin solid $theme;
+	line-height: 2em;
+	padding: 0 1em;
+	outline: none;
+}

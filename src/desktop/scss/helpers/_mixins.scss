@@ -1,23 +1,5 @@
-@mixin links(){
-
-  a{
-    text-decoration: none;
-    text-transform: capitalize;
-    color: inherit;
-    // transition: color 0.05s;
-
-    &:hover{
-      color: $black;
-    }
-  }
-
-	&[class$="active"]{
-		color: $black;
-	}
-}
-
 // http://www.mademyday.de/css-height-equals-width-with-pure-css.html
-@mixin box-ratio($ratio: $box-ratio, $content: '.box__content'){
+@mixin box-ratio($ratio, $content){
   position: relative;
   
   &:before {
@@ -36,12 +18,33 @@
   }
 }
 
+@mixin logo(){  
+  background-image: url('../images/assets/enviu_logo.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  text-indent: -1000em;
+  width: 130px;
+}
+
 %clearfix {
   &:after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+%container {
+  margin: $section-vertical-padding 0;
+  min-width: $site-min-width;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+%container-narrow {
+  @extend %container;
+  max-width: $site-max-width * .66;
 }
 
 

@@ -1,0 +1,53 @@
+<header class='header'>
+	<div class='header__main'>
+		<div class='header__main-container'>
+			<a href='index.html' class='header__logo'>
+				Enviu
+			</a>
+			<div class='header__navigation'>
+			{{> helpers/navigation active=active}}
+			</div>
+			<div class='header__right'>
+				<ul class='header__social'>
+					<li class='header__social-item'>
+						<a class='header__social-link' href=''>
+							<i class='icon fa fa-facebook'></i>
+						</a>
+					</li>
+					<li class='header__social-item'>
+						<a class='header__social-link' href=''>
+							<i class='icon fa fa-twitter'></i>
+						</a>
+					</li>
+					<li class='header__social-item'>
+						<a class='header__social-link' href=''>
+							<i class='icon fa fa-linkedin'></i>
+						</a>
+					</li>
+				</ul>
+				<ul class='header__search'>
+					<i class='icon fa fa-search'></i>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='header__sub'>
+		<div class='header__sub-container'>
+			<ul class='header__quicklinks'>
+				<li class='header__quicklinks-item {{#menu_active  'invest' active}}{{/menu_active}}'>
+					<a class='header__quicklinks-link' href='invest.html'>
+						I am an investor
+						<i class='icon fa fa-arrow-circle-right'></i>
+					</a>
+				</li>
+				<li class='header__quicklinks-item {{#menu_active 'collaborate' active}}{{/menu_active}}'>
+					<a class='header__quicklinks-link' href='collaborate.html'>
+						I am an entrepreneur
+						<i class='icon fa fa-arrow-circle-right'></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	{{> helpers/leaderboard items=leaderboard}}
+</header>

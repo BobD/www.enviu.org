@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    {{> sections/meta}}
+
+    <body class='main'>
+
+    	<div class='main__container'>
+		
+			{{> sections/header leaderboard=content.leaderboard.invest active='invest'}}
+
+	        <main class='content'>
+
+        		<section class='section section--narrow'>
+					{{> helpers/article state='article--lead'}}
+					{{> helpers/article title='Lotem ipsum'}}
+	        		{{> helpers/article title='Nullam tempus malesuada'}}
+				</section>
+
+				<section class='section'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>Current projects in funding</h2>
+				    	<h3 class='section__header-description'>Strong projects ready for your support</h3>
+	        		</header>
+
+					<div class='grid grid--column-3 grid--articles grid--center'>
+						
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								<article class='article article--column'>
+
+									<header class='article__header'>
+										<div class='article__header-image'></div>
+									</header>
+
+									<div class='article__content'>
+
+										<p>
+											Help us clean the ocean from plastic. We are looking for 14 volunteers!
+										</p>
+
+										{{> helpers/button title='Show this venture!' link='' icon='fa-arrow-circle-o-right'}}
+
+									</div>
+
+								</article>
+
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								
+								<article class='article article--column'>
+
+									<header class='article__header'>
+										<div class='article__header-image'></div>
+									</header>
+
+									<div class='article__content'>
+
+										<p>
+											Submit your ideas to help recovering our rainforrests.
+										</p>
+
+										{{> helpers/button title='Show this venture' link='' icon='fa-arrow-circle-o-right'}}
+
+									</div>
+
+								</article>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+				</section>
+
+				<section class='section'>
+	        		<header class='section__header'>
+	        			<h2 class='section__header-title'>Enviu's Ventures</h2>
+				    	<h3 class='section__header-description'>Succesfull business examples</h3>
+	        		</header>
+					{{> helpers/caroussel items=content.ventures}}
+				</section>
+
+				<section class='section section--narrow'>
+					{{> helpers/quote body='Working together with Enviu has been a real help to create a meaningfull network. Within three years we have become financially indepenet' person='Karel de Clerk' source='Milieu Centraal' link=''}}
+				</section>
+
+				<section class='section'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>Facts &amp; figures</h2>
+				    	<h3 class='section__header-description'>Three Wheels United</h3>
+	        		</header>
+
+					<div class='facts'>
+						<img class='facts__visual facts__visual--one' src='images/assets/facts_1.svg'/>
+						<img class='facts__visual facts__visual--two' src='images/assets/facts_2.svg'/>
+						<img class='facts__visual facts__visual--three' src='images/assets/facts_3.svg'/>
+						<img class='facts__visual facts__visual--four' src='images/assets/facts_4.svg'/>
+					</div>
+
+	        	</section>
+
+			</main>
+
+	        {{> sections/footer}}
+
+        </div>
+
+    </body>
+
+</html>

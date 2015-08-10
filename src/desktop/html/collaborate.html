@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    {{> sections/meta}}
+
+    <body class='main'>
+
+    	<div class='main__container'>
+		
+			{{> sections/header leaderboard=content.leaderboard.collaborate active='collaborate'}}
+
+	        <main class='content'>
+
+	        	<section class='section section--narrow'>
+	        		{{> helpers/article state='article--regular article--lead'}}
+	        		{{> helpers/button title='Check out our Open Calls' link='' icon='fa-arrow-circle-o-down'}}
+	        	</section>
+
+	        	<section class='section section--narrow'>
+	        		{{> helpers/article title='Become a strategic partner'}}
+	        		{{> helpers/article title='Start-ups'}}
+	        	</section>
+
+	        	<section class='section'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>Open calls</h2>
+				    	<h3 class='section__header-description'>Submit your business plan</h3>
+	        		</header>
+
+					<div class='grid grid--column-3 grid--articles'>
+						
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								<article class='article article--column'>
+
+									<header class='article__header'>
+										<div class='article__header-image'></div>
+									</header>
+
+									<div class='article__content'>
+
+										<p>
+											Help us clean the ocean from plastic. We are looking for 14 volunteers!
+										</p>
+
+										{{> helpers/button title='Yes i want to help!' link='' icon='fa-arrow-circle-o-right'}}
+
+									</div>
+
+								</article>
+
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								
+								<article class='article article--column'>
+
+									<header class='article__header'>
+										<div class='article__header-image'></div>
+									</header>
+
+									<div class='article__content'>
+
+										<p>
+										Submit your ideas to help recovering our rainforrests.
+										</p>
+
+										{{> helpers/button title='I have an idea' link='' icon='fa-arrow-circle-o-right'}}
+
+									</div>
+
+								</article>
+
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								
+								<article class='article article--column'>
+
+									<header class='article__header'>
+										<div class='article__header-image'></div>
+									</header>
+
+									<div class='article__content'>
+
+										<p>
+										Local commuinities are looking for clean energy producers.
+										</p>
+
+										{{> helpers/button title="I'm the one you're looking for" link='' icon='fa-arrow-circle-o-right'}}
+
+									</div>
+
+								</article>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+				<section class='section section--narrow'>
+
+					{{> helpers/quote body='Working together with Enviu has been a real help to create a meaningfull network. Within three years we have become financially indepenet' person='Karel de Clerk' source='Milieu Centraal' link=''}}
+
+				</section>
+
+			</main>
+
+	        {{> sections/footer}}
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,7 +1,45 @@
 .section{
-	margin: $section-vertical-padding 0;
+	@extend %container;
+	margin-top: 5em;
+	margin-bottom: 5em;
+
+	&--narrow{
+		@extend %container-narrow;
+	}
+
+	&--sidebar{
+		overflow: hidden;
+
+		.section__sidebar{
+			width: 33%;
+			padding-right: 1em;
+			float: left;
+		}
+
+		.section__content{
+			display: block;
+			overflow: hidden;
+
+		}
+	}
+
+	&--center{
+		text-align: center;
+	}
 }
 
 .section__header{
-	@include setType(8, $ms-up3);
+	color: $theme;
+	text-align: center;
+	margin-bottom: 4em;
+
+	> .section__header-title{
+		@include setType(6, $ms-up2);
+		font-weight: bold;
+	}
+
+	> .section__header-description{
+		@include setType(4, $ms-up2);
+		font-weight: normal;
+	}
 }

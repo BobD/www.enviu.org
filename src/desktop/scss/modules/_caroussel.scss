@@ -6,6 +6,12 @@
 
 .caroussel__item{
 	padding: 0 $caroussel__item-padding;
+
+	&:hover{
+		.caroussel__info{
+			top: 2em;
+		}
+	}
 }
 
 .caroussel__item-content{
@@ -14,17 +20,100 @@
 	height: 100%;
 }
 
-.caroussel__image{
+.caroussel__image,
+.caroussel__info{
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+}
+
+.caroussel__image{
 	background-repeat: none;
 	background-size: cover;
 	background-position: center center;
+	border-radius: $border-radius;
 }
 
 .caroussel__info{
+	z-index: 1;
+	top: 10em;
+	background: $grey-light;
+	padding: 1em;
+	transition: all $transition-duration;
+	border-bottom-left-radius: $border-radius;
+	border-bottom-right-radius: $border-radius;
+}
 
+.caroussel__info-open{
+	position: absolute;
+	bottom: 100%;
+	left: 1em;
+	background: $grey-light;
+	padding: 0 .5em;
+	color: $theme;
+	font-size: 1.2em;
+	border-radius: $border-radius;
+	margin-bottom: -.7em;
+
+	.icon{
+		vertical-align: top;
+	}
+}
+
+.caroussel__info-header{
+	@include setType(4, $ms-up1);
+	font-weight: 700;
+	width: 100%;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.caroussel__info-list{
+	margin-bottom:  1em;
+}
+
+.caroussel__info-list-item{
+	line-height: 1.2em;
+
+	.icon{
+		margin-right: .5em;
+	}
+	
+	.icon,
+	span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.caroussel__info-body{
+	@include setType(2.5, $base-em-font-size);
+	margin-bottom: 1em;
+}
+
+.caroussel__info-footer{
+
+	.social{
+		background: transparent;
+		padding: 0;
+
+		.social__title{
+			display: none;
+		}
+
+		.social__item{
+			border: 1em solid $theme;
+
+			&:hover{
+				border-color: $theme-dark;
+			}
+			
+			.icon{
+				color: $white;
+			}
+		}
+	}
 }

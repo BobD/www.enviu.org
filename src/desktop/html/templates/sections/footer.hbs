@@ -1,9 +1,35 @@
-<footer class='footer box--padding'>
-	
-	<ul class='footer__links'>
-		<li class='footer__item'>
-			<a class='footer__link' href=''>test</a>
-		</li>
-	</ul>
+<footer class='footer'>
+
+	<div class='footer__sub'>
+		<div class='footer__sub-container box--padding'>
+			newsletter
+		</div>
+	</div>
+
+	<div class='footer__main'>
+		<div class='footer__main-container box--padding'>
+
+			<a href='index.html' class='footer__logo'>
+				Enviu
+			</a>
+
+			<ul class='footer__links'>
+				{{#each content.navigation}}
+				<li class='footer__item {{#menu_active ../active title}}{{/menu_active}}'>
+					<a class='footer__link' href='{{url}}'>{{title}}</a>
+				</li>
+	  			{{/each}}
+			</ul>
+
+			<div class='footer__copyright'>
+				© copyright 2015 enviu all rights reserved
+			</div>
+
+{{!-- 			<div class='footer__adress'>
+				© copyright 2015 enviu all rights reserved
+			</div>
+ --}}
+		</div>
+	</div>
 
 </footer>

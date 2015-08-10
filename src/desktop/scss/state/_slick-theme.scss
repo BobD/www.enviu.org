@@ -18,32 +18,69 @@
     color: transparent;
     width: 4em;
     text-align: center;
-    opacity: .75;
-    transition: all $transition-duration;
-
 
     &:before{
         font-family: FontAwesome;
         color: white;
         font-size: 4em;
+        transition: all $transition-duration;
+        opacity: .75;
     }
 
     &:hover{
-        opacity: 1;
-        transform: scale(1.2);
+        &:before{
+            opacity: 1;
+            transform: scale(1.2);
+        }
     }
 }
 
 .slick-prev{
     left: 15px;
     &:before{
-        content: '\f053';
+        content: '\f104';
     }
 }
 
 .slick-next{
     right: 15px;
+    &:before{
+        content: '\f105';
+    }
+}
+
+.slick-caroussel{
+
+    .slick-arrow{
+        background: $theme;
+        width: 3em;
+        height: 100%;
+        top: 0;
+        margin-top: 0;
+        border-radius: $border-radius;
+        text-align: center;
+        transition: all $transition-duration;
+
+        &:hover{
+            background: $theme-dark;
+        }
+
         &:before{
-        content: '\f054';
+            display: inline-block;
+            margin-top: .5em;
+            position: relative;
+        }
+
+        &.slick-prev{
+            left: -4em;
+        }
+
+        &.slick-next{
+            right: -4em;
+        }
+    }
+
+    .caroussel__item{
+        outline: 0;
     }
 }

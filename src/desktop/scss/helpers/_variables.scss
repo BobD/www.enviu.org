@@ -1,7 +1,13 @@
 // Colors
 $white:								white;
-$black:								black;
-$theme:								#00b5cc;
+$black:								#1A1A1A;
+$grey:								#333333;
+$grey-light:						#F7F7F7;
+$yellow:							#ECE24B;
+$theme-extra-light:					#54CBDA;
+$theme-light:						#54CBDA;
+$theme:								#1EB5CA;
+$theme-dark:						#088AA8;
 $site-background-color:				$white;
 $page-background-color:				$site-background-color;
 $text-color:						$black;
@@ -17,6 +23,9 @@ $site-max-width:					900px;
 $box-ratio:							45%;
 $caroussel__item-padding: 			1em;
 $grid__item-padding:				1em;
+
+// 
+$border-radius:						4px;
 
 // Effects
 $transition-duration:				0.4s;

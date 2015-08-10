@@ -1,0 +1,28 @@
+.visual{
+
+	&--split{
+		overflow: hidden;
+
+		.visual__image{
+			float: left;
+			width: 80%;
+			margin-right: 1em;
+			border-radius: 4px;
+		}
+
+		.visual__description{
+			display: block;
+			overflow: hidden;
+			border-radius: 4px;
+			padding: .5em 1em;
+			background: $theme;
+			color: $white;
+			@include setType(3, $base-em-font-size);
+		}
+	}
+
+}
+
+.visual__image{
+	width: 100%;
+}

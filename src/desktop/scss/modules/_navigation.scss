@@ -1,5 +1,4 @@
 .navigation{
-	background-color: $theme;
 	color: $white;
 }
 
@@ -10,8 +9,18 @@
 .navigation__item{
 	display: inline-block;
 
-	@include links();
+	&:hover,
+	&.active{
+		background-color: rgba($theme-dark, .6);
+	}
 }
 
 .navigation__link{
+	text-decoration: none;
+    text-transform: lowercase;
+    font-weight: 700;
+    color: inherit;
+	line-height: inherit;
+	display: block;
+	padding: 0 1.5em;
 }

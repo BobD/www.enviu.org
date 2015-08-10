@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    {{> sections/meta}}
+
+    <body class='main'>
+
+    	<div class='main__container'>
+		
+			{{> sections/header active='about'}}
+
+	        <main class='content'>
+
+	        	<section class='section'>
+	        		<header class='section__header'>
+	        			Featured
+	        		</header>
+					{{> helpers/caroussel items=content.ventures}}
+				</section>
+
+				<section class='section'>
+				    <header class='section__header'>
+				    	Team
+	        		</header>
+					{{> helpers/grid items=content.team colums=5}}
+				</section>
+
+				<section class='section'>
+		    		<header class='section__header'>
+				    	About
+	        		</header>
+					{{> helpers/article}}
+				</section>
+
+				<section class='section articles'>
+					<header class='section__header'>
+				    	News
+	        		</header>
+
+					<div class='grid grid-column-3'>
+						
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								{{> helpers/article}}
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								{{> helpers/article}}
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								{{> helpers/article}}
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+			</main>
+
+	        {{> sections/footer}}
+
+        </div>
+
+    </body>
+
+</html>

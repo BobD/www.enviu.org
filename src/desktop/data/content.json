@@ -1,16 +1,55 @@
 {
 	"navigation": [
-		{"title": "home", "url": "/"},
-		{"title": "about", "url": "/about/"},
-		{"title": "contact", "url": "/contact/"}
+		{"title": "about", "url": "index.html"},
+		{"title": "our work", "url": "work.html"},
+		{"title": "people", "url": "people.html"},
+		{"title": "news", "url": "news.html"},
+		{"title": "contact", "url": "contact.html"}
 	],
 
-	"leaderboard": [
-		{"title": "Safe and Sustainable Sanitation",  "url": "", "image": "images/leaderboard/leaderboard-1.jpg"},
-		{"title": "Safe and Sustainable Sanitation",  "url": "", "image": "images/leaderboard/leaderboard-1.jpg"}
-	],
+	"leaderboard": {
+		"about": {
+			"title": "About",
+			"description": "Enviu' positioning and process",
+			"items": [
+				{"url": "", "image": "images/leaderboard/lb-1.png"},
+				{"url": "", "image": "images/leaderboard/lb-2.png"},
+				{"url": "", "image": "images/leaderboard/lb-3.png"},
+				{"url": "", "image": "images/leaderboard/lb-4.jpg"},
+				{"url": "", "image": "images/leaderboard/lb-5.jpg"}
+			]
+		},
+		"collaborate": {
+			"title": "Collaborate",
+			"description": "About collaborating with Enviu",
+			"items": [
+				{"url": "", "image": "images/leaderboard/lb-1.png"}
+			]
+		},
+		"contact": {
+			"title": "Contact",
+			"description": "Let's keep in touch",
+			"items": [
+				{"url": "", "image": "images/leaderboard/lb-2.png"}
+			]
+		},
+		"work": {
+			"title": "Case",
+			"description": "Three Wheels United",
+			"items": [
+				{"url": "", "image": "images/leaderboard/lb-5.jpg"}
+			]
+		},
+		"invest": {
+			"title": "Invest",
+			"description": "Create meaningfull business",
+			"items": [
+				{"url": "", "image": "images/leaderboard/lb-2.png"}
+			]
+		}
+	},
 
-	"featured": [
+	"ventures": [
 		{"title": "Safe and Sustainable Sanitation",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
 		{"title": "3DfromWaste",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
 		{"title": "Yebo!",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"},
@@ -24,17 +63,22 @@
 		{"title": "Micro Pensions",  "url": "", "image": "images/caroussel/featured/featured-1.jpg"}
 	],
 
-	"team": [
-		{"title": "Team member 1",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 2",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 3",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 4",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 5",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 6",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 7",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 8",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 9",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 10",  "url": "", "image": "images/grid/grid-1.jpg"},
-		{"title": "Team member 11",  "url": "", "image": "images/grid/grid-1.jpg"}
-	]
+	"clients": [
+		{"title": "Team member 1",  "url": "", "image": ""},
+		{"title": "Team member 2",  "url": "", "image": ""},
+		{"title": "Team member 3",  "url": "", "image": ""},
+		{"title": "Team member 4",  "url": "", "image": ""},
+		{"title": "Team member 5",  "url": "", "image": ""},
+		{"title": "Team member 6",  "url": "", "image": ""},
+		{"title": "Team member 7",  "url": "", "image": ""},
+		{"title": "Team member 8",  "url": "", "image": ""},
+		{"title": "Team member 9",  "url": "", "image": ""},
+		{"title": "Team member 10",  "url": "", "image": ""},
+		{"title": "Team member 11",  "url": "", "image": ""},
+		{"title": "Team member 11",  "url": "", "image": ""}
+	],
+
+	"articles": {
+
+	}
 }
