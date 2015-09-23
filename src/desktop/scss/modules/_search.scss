@@ -1,0 +1,23 @@
+.search{
+	
+}
+
+.search__item{
+	margin-bottom: 3.5em;
+}
+
+.search__item-title{
+	color: $theme;
+	@include setType(4, $ms-up1);
+}
+
+.search__item-body{
+	> p{
+		margin-bottom: 1em;
+	}
+
+	.more-link{
+		display: none;
+	}
+	
+}

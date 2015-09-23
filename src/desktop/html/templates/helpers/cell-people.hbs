@@ -1,0 +1,37 @@
+<div class='cell cell--people'>
+
+	<header class='cell__header'>
+		<img class='cell__image' src='{{image}}' {{#if over_image}}onmouseover="this.src='{{over_image}}'" onmouseout="this.src='{{image}}'"{{/if}}></img>
+	</header>
+
+	<div class='cell__content'>
+
+		<div class='cell__content-container'>
+
+			<div class='cell__title'>{{title}}</div>
+			<div class='cell__body'>
+				{{sub_title}}
+				<br/>
+				{{description}}
+			</div>
+
+			<ul class='cell__list'>
+				<li class='cell__list-item'>
+					<i class='icon icon-Enviu_icons_telefoon'></i>
+					<span class='cell__list-title'>+31 6 515 609 26</span>
+				</li>
+				<li class='cell__list-item'>
+					<i class='icon icon-Enviu_icons_envelop'></i>
+					<span class='cell__list-title'>bart@enviu.org</span>
+				</li>
+			</ul>
+
+			{{> helpers/social-share class='cell-social' title=''}}
+
+		</div>
+		
+
+	</div>
+
+</div>
+								

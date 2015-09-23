@@ -34,11 +34,13 @@ module.exports = function(grunt) {
     copy: {
       desktop: {
        files: [
+          {expand: true, cwd: 'src/desktop/fonts/', src: ['**/*.*'], dest: 'build/desktop/fonts', filter: 'isFile'},
           {expand: true, cwd: 'src/desktop/images/', src: ['**/*.*'], dest: 'build/desktop/images', filter: 'isFile'},
           {expand: true, cwd: 'src/desktop/scripts', src: ['**/*.*'], dest: 'build/desktop/scripts', filter: 'isFile'},
           {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'build/desktop/scripts/vendors/jquery', filter: 'isFile'},
           {expand: true, cwd: 'bower_components/underscore/', src: ['underscore-min.*'], dest: 'build/desktop/scripts/vendors/underscore', filter: 'isFile'},
           {src: 'bower_components/fastclick/lib/fastclick.js',  dest: 'build/desktop/scripts/vendors/fastclick.js'},
+          {src: 'bower_components/ScrollMagic/ScrollMagic/minified/ScrollMagic.min.js',  dest: 'build/desktop/scripts/vendors/scrollmagic.min.js'},
           {src: 'src/desktop/html/backgroundsize.min.htc',  dest: 'build/desktop/backgroundsize.min.htc'}
         ]
       },

@@ -5,7 +5,3 @@
 .box--ratio{
 	@include box-ratio($box-ratio, '.box-container');
 }
-
-.box--padding{
-	padding: $vertical-padding $horizontal-padding $vertical-padding $horizontal-padding;
-}

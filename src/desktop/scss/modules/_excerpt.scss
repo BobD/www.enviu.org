@@ -1,6 +1,7 @@
 .excerpt{
 	overflow: hidden;
 	background-color: #F7F7F7;
+	position: relative;
 
 	&--right{
 		background-color: transparent;
@@ -33,5 +34,55 @@
 
 	.article__header{
 		@include setType(4, $ms-up1);
+	}
+
+	// Remove the Wordpress generated read more link
+	.more-link{
+		display: none;
+	}
+}
+
+
+@include respond-to(mobile) {
+	
+	.excerpt__image-container{
+		float: none;
+		width: 100%;
+	}
+		
+	.excerpt__content{
+		padding: $section-padding-mobile;;
+	}
+
+}
+
+@include respond-to(tablet) {
+
+	.excerpt{
+
+		&--right{
+
+			.excerpt__image-container{
+				left: auto;
+				right: 0;
+			}
+			
+			.excerpt__content{
+				float: left;
+			}
+		}
+	}
+
+	.excerpt__image-container{
+		position: absolute;
+		width: 40%;
+		left: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	.excerpt__content{
+		width: 60%;
+		float: right;
 	}
 }

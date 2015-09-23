@@ -10,25 +10,12 @@
 
     	<div class='main__container'>
 		
-			{{> sections/header leaderboard=content.leaderboard.work  active='our work'}}
+			{{> sections/header leaderboard=content.leaderboard.case  active='our work'}}
 
 	        <main class='content'>
 
-	        	<section class='section section--narrow'>
-					{{> helpers/article title='Banglalore' description='India' image='images/assets/bangladore_india_2.png' state='article--lead article--image'}}
-				</section>
-
-				<section class='section section--narrow'>
-					{{> helpers/article title='Oplossing'}}
-					{{> helpers/article title='Uitdaging'}}
-				</section>
-
-				<section class='section'>	
-					{{> helpers/visual image='images/assets/Pondicherry-rickshaw-driver.jpeg' description='Het doel van Three Wheels united is om echte verandering aan te brengen in dit systeem. Hiertoe heeft Three Wheels United een business model ontwikkeld gebaseerd op drie uitgangspunten.'}}
-				</section>
-
-				<section class='section section--narrow'>
-					{{> helpers/article title='Impact'}}
+	        	<section class='section'>
+					{{> helpers/article-page}}
 				</section>
 
 				<section class='section'>
@@ -39,16 +26,16 @@
 	        		</header>
 
 					<div class='facts'>
-						<img class='facts__visual facts__visual--one' src='images/assets/facts_1.svg'/>
-						<img class='facts__visual facts__visual--two' src='images/assets/facts_2.svg'/>
-						<img class='facts__visual facts__visual--three' src='images/assets/facts_3.svg'/>
-						<img class='facts__visual facts__visual--four' src='images/assets/facts_4.svg'/>
+						<img class='facts__visual facts__visual--one' src='images/static/facts_1.svg'/>
+						<img class='facts__visual facts__visual--two' src='images/static/facts_2.svg'/>
+						<img class='facts__visual facts__visual--three' src='images/static/facts_3.svg'/>
+						<img class='facts__visual facts__visual--four' src='images/static/facts_4.svg'/>
 					</div>
 
 	        	</section>
 
 	        	<section class='section section--center'>
-					{{> helpers/social title='Spread the word'}}
+					{{> helpers/social-share title='Spread the word'}}
 	        	</section>
 
 			</main>

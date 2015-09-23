@@ -2,10 +2,12 @@
 	background-color: $theme;
 	color: white;
 	text-decoration: none;
-	padding: 0 .8em;
-	font-weight: 700;
+	padding: .2em .8em;
 	border-radius: 4px;
 	display: inline-block;
+	line-height: inherit;
+
+	@include bold();
 
 	.icon{
 		margin-left: .5em;
@@ -14,5 +16,20 @@
 	&.active,
 	&:hover{
 		background-color: $theme-dark;
+	}
+
+	&--large{
+		padding: .2em 1em;
+	}
+
+	&--light{
+		background-color: $white;
+		color: $theme;
+
+		&.active,
+		&:hover{
+			background-color: $white;
+			color: $theme-dark;
+		}
 	}
 }

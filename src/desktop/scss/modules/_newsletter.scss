@@ -1,0 +1,77 @@
+.newsletter{
+	
+}
+
+.newsletter__quote{
+	margin-right: 1em;
+	font-weight: 700;
+	display: inline-block;
+}
+
+.newsletter__input{
+	width: 20em !important;
+	display: inline-block !important;
+	border-radius: $border-radius;
+	border: none;
+	outline: none;
+	padding: .5em 1em;
+	color: $black;
+}
+
+.newsletter__submit{
+	background-color: $grey-light;
+	border: none;
+	outline: none;
+	border-top-right-radius: $border-radius;
+	border-bottom-right-radius: $border-radius;
+	padding: .5em 1em;
+	margin-left: -1em;
+
+	&:hover{
+		background-color: $theme-dark;
+	}
+}
+
+// Some styles for https://wordpress.org/plugins/mailchimp-for-wp/faq/
+.footer{
+	.mc4wp-form{
+		position: relative;
+	}
+
+	.mc4wp-alert,
+	.mc4wp-notice,
+	.mc4wp-success,
+	.mc4wp-error{
+		position: absolute;
+		bottom: 100%;
+		margin-bottom: 2em;
+		right: 0;
+		background: $theme-dark;
+		color: $white;
+		padding: .5em 1em;
+		border-radius: $border-radius;
+
+		a[href]{
+			color: inherit;
+		}
+	}
+}
+
+
+@include respond-to(mobile) {
+
+	.footer__sub-container{
+		text-align: left;
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+
+	.newsletter__quote{
+		display: block;
+		margin-bottom: 1em;
+
+		&:first-of-type{
+			display: none;
+		}
+	}
+}

@@ -1,28 +1,87 @@
-.visual{
+figure{
+	margin: 3em 0;
+	width: 100% !important;
+	overflow: hidden;
 
-	&--split{
-		overflow: hidden;
-
-		.visual__image{
-			float: left;
-			width: 80%;
-			margin-right: 1em;
-			border-radius: 4px;
-		}
-
-		.visual__description{
-			display: block;
-			overflow: hidden;
-			border-radius: 4px;
-			padding: .5em 1em;
-			background: $theme;
-			color: $white;
-			@include setType(3, $base-em-font-size);
-		}
+	> a,
+	> img{
+		float: left;
+		width: 80%;
+		margin-right: 2em;
+		border-radius: 4px;
 	}
 
+	figcaption{
+		display: block;
+		overflow: hidden;
+		border-radius: 4px;
+		padding: .5em 1em;
+		background: $theme;
+		color: $white;
+		@include setType(3, $base-em-font-size);
+	}
+
+	img{
+		width: 100%;
+		height: auto;
+
+	}
 }
 
-.visual__image{
-	width: 100%;
+
+@include respond-to(mobile) {
+	.visual{
+
+		&--split{
+
+			.visual__image{
+				float: none;
+				width: 100%;
+			}
+
+		}
+	}
 }
+
+// .visual{
+
+// 	&--split{
+// 		overflow: hidden;
+
+// 		.visual__image{
+// 			float: left;
+// 			width: 80%;
+// 			margin-right: 1em;
+// 			border-radius: 4px;
+// 		}
+
+// 		.visual__description{
+// 			display: block;
+// 			overflow: hidden;
+// 			border-radius: 4px;
+// 			padding: .5em 1em;
+// 			background: $theme;
+// 			color: $white;
+// 			@include setType(3, $base-em-font-size);
+// 		}
+// 	}
+// }
+
+// .visual__image{
+// 	width: 100%;
+// }
+
+
+// @include respond-to(mobile) {
+// 	.visual{
+
+// 		&--split{
+
+// 			.visual__image{
+// 				float: none;
+// 				width: 100%;
+// 			}
+
+// 		}
+// 	}
+// }

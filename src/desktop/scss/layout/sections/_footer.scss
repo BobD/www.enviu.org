@@ -1,41 +1,77 @@
 .footer{
 	color: $white;
 	background-color: $grey;
+
+	&__social-follow{
+		float: left;
+		position: relative;
+		top: -4px;
+
+		> span{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 1em;
+			
+			@include bold();
+		}
+
+		.social-follow__item{
+		}
+
+		.social-follow__link{
+			position: relative;
+			text-transform: none;
+			color: $white;
+			display: block;
+			font-size: 1.4em;
+			text-align: center;
+		}
+	}
 }
 
 .footer__main{
-	padding-top: 3em;
-	padding-bottom: 3em;
+	padding-top: 6em;
+	padding-bottom: 6em;
 }
 
-.footer__main-container{
-	@extend %container;
+.footer__main,
+.footer__sub{
+	&-container{
+		width: 100%;
+		padding: 0 $horizontal-padding * 3;
+	}
 }
 
 .footer__sub{
+	padding-top: 1em;
+	padding-bottom: 1em;
 	background-color: $black;
 }
 
 .footer__sub-container{
-	@extend %container;
 	text-align: right;
+}
+
+.footer__newsletter{
+	display: inline-block;
 }
 
 .footer__logo,
 .footer__links{
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 .footer__logo{
+	@include logo();
+
+	margin-left: -1.1em;
   	padding: 0 .5em 0 0;
   	text-decoration: none;
   	color: inherit;
-  	margin-top: -10px;
   	width: 100px !important;
-  	height: 60px;
-  
-	@include logo();
+  	height: 3em;
+  	margin-top: -.75em;
 }
 
 .footer__links{
@@ -43,7 +79,7 @@
 
 .footer__item{
 	display: inline-block;
-	margin: 0 2em;
+	margin: 0 1.5em;
 }
 
 .footer__link{
@@ -55,4 +91,59 @@
 	text-transform: uppercase;
 	margin-top: 1em;
 	@include setType(4, $ms-down1);
+}
+
+.footer__address{
+	float: right;
+	top: 0;
+	display: block;
+	line-height: 1.5;
+
+	.footer__adress-left,
+	.footer__adress-right{
+		display: inline-block;
+		vertical-align: top;
+		width: 14em;
+	}
+
+	.footer__adress-item{
+		.icon{
+			margin-right: .5em;
+		}
+
+		&--phone{
+			margin-top: 1.5em;
+		}
+	}
+
+	.footer__adress-link{
+		color: $white;
+	}
+}
+
+@include respond-to(mobile) {
+
+	.footer__sub-container,
+	.footer__main-container{
+		padding-left: $section-padding-mobile !important;
+		padding-right: $section-padding-mobile !important;
+	}
+	
+	.footer__main-container,
+	.footer__sub-container{
+		min-width: 0;
+		max-width: auto !important;
+	}
+
+	.footer__item{
+		margin-left: 0;
+		margin-right:4em;
+		margin-bottom: 1em;
+	}
+
+	.footer__adress-left,
+	.footer__adress-right{
+		display: block;
+		margin: 1em 0;
+	}
 }

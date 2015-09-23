@@ -1,5 +1,5 @@
 body{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Campton Light', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: $text-color;
@@ -7,4 +7,14 @@ body{
 	// https://github.com/ianrose/typesettings
 	font-size: ($base-font-size / 16px) * 100%;
 	@include setLeading();
+}
+
+@mixin bold(){
+	font-family: 'Campton SemiBold', sans-serif;
+	font-weight: normal;
+}
+
+h1,
+h2{
+	@include bold();
 }

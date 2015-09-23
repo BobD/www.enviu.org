@@ -1,0 +1,32 @@
+<section class='leaderboard'>
+
+	<div class='leaderboard__content'>
+
+		{{> helpers/off-canvas}}
+
+		<ul class='leaderboard__list slick-leaderboard'>
+			{{#each content.leaderboard.home.items}}
+			<li class='leaderboard__image' style='background-image: url("{{image}}")'></li>
+			{{/each}}
+		</ul>
+
+		<div class='leaderboard__header'>
+
+			<div class='leaderboard__container'>
+				<h1 class='leaderboard__title'>{{content.leaderboard.home.title}}</h1>
+				<h2 class='leaderboard__description'>{{content.leaderboard.home.description}}</h2>
+
+				{{> helpers/button title="This is how we work" link='#off-canvas' icon='icon-Enviu_icons_pijl_rechts' type='button--large'}}
+			</div>
+			
+		</div>
+
+		<div class='leaderboard__scrolldown'>
+			<a class='leaderboard__scrolldown-link scrolldown--effect' href='#facts'>
+				<i class='icon icon-Enviu_icons_scroll_down'></i>
+			</a>
+		</div>
+
+	</div>
+
+</section>

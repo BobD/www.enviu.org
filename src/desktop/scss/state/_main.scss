@@ -1,5 +1,47 @@
 .main{
 
+	&--home{
+
+		.leaderboard{
+			height: 100vh;
+			top: 0;
+
+			&:before{
+				display: none;
+			}
+		}
+
+		.leaderboard__header{
+			top: 6em;
+			bottom: auto;
+		}
+
+		.leaderboard__container{
+			min-width: 0;
+			max-width: none;
+			width: 30em;
+			margin-left: 4em;
+
+			.button{
+				margin-top: 3em;
+			}
+		}
+
+		.main__container{
+			padding-top: 0;
+		}
+
+		.section__page-vertical-center{
+			> .button{
+				margin-top: 6em;
+			}
+		}
+
+		.footer{
+			position: relative;
+		}
+	}
+
 	&--contact{
 
 		.contact__header{
@@ -50,5 +92,101 @@
 		.form__textarea{
 		}
 
+	}
+
+	// Wordpress classes..
+	&.search{
+		.section__header{
+			text-align: left;
+		}
+
+		.section__header-description{
+			@include setType(4, $ms-up1);
+			font-weight: bold;
+		}
+	}
+
+	&.admin-bar{
+		.header { top: $wp-admin-bar-height; }
+		@media screen and ( max-width: 782px ) {
+			.header { top: $wp-admin-bar-height-plus; }
+		}
+	}
+
+}
+
+@include respond-to(mobile) {
+
+	.main{
+
+		&--home{
+
+			.leaderboard__container{
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+
+		&--contact{
+			.contact__form-left,
+			.contact__form-right{
+				width: 100%;
+				display: block;
+				margin-left: 0;
+			}
+		}
+
+	}
+}
+
+@include respond-to(tablet) {
+	.main{
+
+		&--home{
+
+
+		}
+	}
+}
+
+@include respond-to(desktop) {
+
+	.main{
+
+		&--home{
+
+			.leaderboard__header{
+				top: 50%;
+				margin-top: -5em;
+				bottom:  auto;
+
+				.leaderboard__title{
+					@include setType(4, $ms-up4);
+				}
+			}
+
+			.section{
+				height: 100vh;
+			}
+
+			.leaderboard{
+				position: fixed;
+				width: 100%;
+				max-height: none;
+			}
+
+			.main__container{
+				position: relative;
+				top: 100vh;
+			}
+
+			.content{
+				position: relative;
+				background: $white;
+				padding-top: 5em;
+				padding-bottom: 6em;
+				// top: 100vh;
+			}
+		}
 	}
 }

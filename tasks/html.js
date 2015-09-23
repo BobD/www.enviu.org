@@ -18,6 +18,12 @@ module.exports = function(grunt) {
 			return (items.length < columns) ? 'grid--center' : '';
 		});
 
+		Handlebars.registerHelper('equals', function(a, b, opts) {
+			if (a == b){
+				return opts.fn(this);
+			}
+		});
+
 		_.each(partials, function(file){
 			dir = path.dirname(file);
 

@@ -10,9 +10,53 @@
 
     	<div class='main__container'>
 		
-			{{> sections/header active='news'}}
+			{{> sections/header leaderboard=content.leaderboard.news active='news'}}
 
 	        <main class='content'>
+
+				<section class='section section--narrow'>
+					{{> helpers/article-lead}}
+				</section>
+
+				<section class='section'>
+
+					<div class="categories">
+						<span class='categories__title'>Show me:</span>
+						<ul class='categories__list'>	
+							<li class='categories__item categories__item--article'>
+								<a class='categories__link' href='http://localhost/enviu/news/article/'>Article</a>
+							</li>
+							<li class='categories__item categories__item--blog'>
+								<a class='categories__link' href='http://localhost/enviu/news/blog/'>Blog</a>
+							</li>
+							<li class='categories__item categories__item--event'>
+								<a class='categories__link' href='http://localhost/enviu/news/event/'>Event</a>
+							</li>
+							<li class='categories__item categories__item--download'>
+								<a class='categories__link' href='http://localhost/enviu/news/event/'>Download</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class='grid grid--column-4 grid--articles'>
+
+						{{#each content.news}}
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								{{> helpers/cell-news image=image title=title button_title='Read'}}
+							</div>
+
+						</div>
+						{{/each}}
+
+					</div>
+
+				</section>
+
+				<section class='section section--center'>
+					{{> helpers/button title="Load more" link='' icon='icon-Enviu_icons_pijl_beneden' type='large'}}
+	        	</section>
 
 			</main>
 

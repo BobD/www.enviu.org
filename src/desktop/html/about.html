@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    {{> sections/meta}}
+
+    <body class='main'>
+
+    	<div class='main__container'>
+		
+			{{> sections/header leaderboard=content.leaderboard.about active='about'}}
+
+	        <main class='content'>
+
+	        	<section class='section section--narrow'>
+					{{> helpers/article-lead}}
+				</section>
+
+				<section class='section'>
+					{{> helpers/excerpt title='Vision' image='images/leaderboard/lb-2.png' state='scroll--effect'}}
+					{{> helpers/excerpt title='Mission' image='images/leaderboard/lb-5.jpg' state='excerpt--right scroll--effect'}}
+					{{> helpers/excerpt title='History' image='images/leaderboard/lb-4.jpg' state='scroll--effect'}}
+				</section>
+
+				<section class='section scroll--effect'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>Enviu process</h2>
+				    	<h3 class='section__header-description'>From idea to BV</h3>
+	        		</header>
+
+					<div class='grid grid--column-3 grid--articles'>
+						
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								<div class='cell cell--clean'>
+
+									<header class='cell__header'>
+
+										<img src='images/static/enviu_lamp.svg' class='cell__image'/>
+
+										<div class='cell__super-title'>Step one</div>
+										<div class='cell__title'>Ideation</div>
+										<div class='cell__sub-title'>1-2 months</div>
+									</header>
+
+									<div class='cell__content'>
+
+										<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+										</p>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								
+								<div class='cell cell--clean'>
+
+									<header class='cell__header'>
+
+										<img src='images/static/enviu_roset.svg' class='cell__image'/>
+
+										<div class='cell__super-title'>Step two</div>
+										<div class='cell__title'>Validation</div>
+										<div class='cell__sub-title'>8-16 months</div>
+									</header>
+
+									<div class='cell__content'>
+
+										<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+										</p>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								
+								<div class='cell cell--clean'>
+
+									<header class='cell__header'>
+
+										<img src='images/static/enviu_raket.svg' class='cell__image'/>
+
+										<div class='cell__super-title'>Step three</div>
+										<div class='cell__title'>Startup</div>
+										<div class='cell__sub-title'>2 years</div>
+									</header>
+
+									<div class='cell__content'>
+
+										<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+										</p>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+				<section class='section scroll--effect'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>Partners &amp; clients</h2>
+				    	<h3 class='section__header-description'>Together we can make a difference</h3>
+	        		</header>
+
+					{{> helpers/grid items=content.clients colums=6}}
+
+				</section>
+
+			</main>
+
+	        {{> sections/footer}}
+
+        </div>
+
+    </body>
+
+</html>

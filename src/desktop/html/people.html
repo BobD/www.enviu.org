@@ -10,9 +10,140 @@
 
     	<div class='main__container'>
 		
-			{{> sections/header active='people'}}
+			{{> sections/header leaderboard=content.leaderboard.people active='people'}}
 
 	        <main class='content'>
+				
+				<section class='section section--narrow'>
+					{{> helpers/article-lead}}
+					{{> helpers/button title="Check out our Challenges" link='' icon='icon-Enviu_icons_pijl_beneden' type='large'}}
+				</section>
+
+				<section class='section section--narrow'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>This is our team</h2>
+				    	<h3 class='section__header-description'>Together we do great stuff</h3>
+	        		</header>
+
+	        	</section>
+
+				<section class='section'>
+
+					<div class='grid grid--column-4 grid--articles'>
+
+						{{#each content.people}}
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								{{> helpers/cell-people type='people' image=image title=title button_title='Read'}}
+							</div>
+
+						</div>
+						{{/each}}
+
+						<div class='grid__item'>
+
+							<div class='cell cell--people cell--people-you'>
+
+								<header class='cell__header'>
+									<div class='cell__image' src='{{image}}'>
+										<i class='icon fa fa-question'></i>
+									</div>
+								</header>
+
+								<div class='cell__content'>
+
+									<div class='cell__content-container'>
+
+										<div class='cell__title'>You?</div>
+										<div class='cell__body'>
+											If you think you and Enviu are a match, please let us know.
+										</div>
+
+									</div>
+
+									{{> helpers/button title="Go to vancancies" link='' icon='icon-Enviu_icons_pijl_rechts' type='large'}}
+									
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+				<section class='section section--narrow'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>Our entrepreneurs</h2>
+				    	<h3 class='section__header-description'>The partners we depend on</h3>
+	        		</header>
+
+	        	</section>
+
+	        	<section class='section'>
+
+					<div class='grid grid--column-4 grid--articles'>
+
+						{{#each content.people}}
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+								{{> helpers/cell-people type='people' image=image title=title button_title='Read'}}
+							</div>
+
+						</div>
+						{{/each}}
+
+					</div>
+
+				</section>
+
+				<section class='section'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>Open challenges</h2>
+				    	<h3 class='section__header-description'>Join communities to tackle specific issues</h3>
+	        		</header>
+
+	        		<div class='grid grid--column-3 grid--articles'>
+						
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								{{> helpers/cell image='images/assets/Our-Oceans-Challenge_Header_img-1600x430.png' title='Solve the issue of plastic soup in our oceans. Join our challenge.' button_title='Join community'}}
+								
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								{{> helpers/cell image='images/assets/landscape.png' title='Increase African profitability and improve their quality of life' button_title='Join community'}}
+
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								{{> helpers/cell image='images/assets/Header-1600x430.png' title='Hier komt een plaatsvervangende oproek' button_title="Join community"}}
+
+							</div>
+
+						</div>
+
+					</div>
+
+	        	</section>
 
 			</main>
 

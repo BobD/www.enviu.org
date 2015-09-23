@@ -1,11 +1,8 @@
 @include respond-to(mobile) {
 }
 
-@include respond-to(small) {
+@include respond-to(tablet) {
 }
 
-@include respond-to(medium) {
-}
-
-@include respond-to(large) {
+@include respond-to(desktop) {
 }

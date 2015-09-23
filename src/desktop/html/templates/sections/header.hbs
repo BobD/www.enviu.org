@@ -1,53 +1,75 @@
 <header class='header'>
+
 	<div class='header__main'>
+
 		<div class='header__main-container'>
 			<a href='index.html' class='header__logo'>
 				Enviu
 			</a>
 			<div class='header__navigation'>
-			{{> helpers/navigation active=active}}
+				{{> helpers/navigation active=active}}
 			</div>
 			<div class='header__right'>
-				<ul class='header__social'>
-					<li class='header__social-item'>
-						<a class='header__social-link' href=''>
-							<i class='icon fa fa-facebook'></i>
+
+				{{!-- Different icons for the header, but keep the markup in sync with helpers/social-follow.hbs template --}}
+				<ul class='social-follow'>
+					<li class='social-follow__item'>
+						<a class='social-follow__link' href=''>
+							<i class='icon icon-Enviu_icons_facebook'></i>
 						</a>
 					</li>
-					<li class='header__social-item'>
-						<a class='header__social-link' href=''>
-							<i class='icon fa fa-twitter'></i>
+					<li class='social-follow__item'>
+						<a class='social-follow__link' href=''>
+							<i class='icon icon-Enviu_icons_twitter'></i>
 						</a>
 					</li>
-					<li class='header__social-item'>
-						<a class='header__social-link' href=''>
-							<i class='icon fa fa-linkedin'></i>
+					<li class='social-follow__item'>
+						<a class='social-follow__link' href=''>
+							<i class='icon icon-Enviu_icons_linkedin'></i>
 						</a>
 					</li>
 				</ul>
-				<ul class='header__search'>
-					<i class='icon fa fa-search'></i>
+
+				<ul class='header__search search-open'>
+					<span class='header__search-label'>search</span>
+					<i class='icon icon-Enviu_icons_vergrootglas'></i>
 				</ul>
 			</div>
 		</div>
 	</div>
+
 	<div class='header__sub'>
 		<div class='header__sub-container'>
 			<ul class='header__quicklinks'>
 				<li class='header__quicklinks-item {{#menu_active  'invest' active}}{{/menu_active}}'>
 					<a class='header__quicklinks-link' href='invest.html'>
 						I am an investor
-						<i class='icon fa fa-arrow-circle-right'></i>
+						<i class='icon icon-Enviu_icons_pijl_rechts'></i>
 					</a>
 				</li>
 				<li class='header__quicklinks-item {{#menu_active 'collaborate' active}}{{/menu_active}}'>
 					<a class='header__quicklinks-link' href='collaborate.html'>
 						I am an entrepreneur
-						<i class='icon fa fa-arrow-circle-right'></i>
+						<i class='icon icon-Enviu_icons_pijl_rechts'></i>
 					</a>
 				</li>
 			</ul>
 		</div>
 	</div>
-	{{> helpers/leaderboard items=leaderboard}}
+
+	<div class='header__searchbar'>
+		<form class='header__searchbar-form' action="/" method="get">
+			<label class='header__searchbar-label' for="search">
+				<i class='icon icon-Enviu_icons_vergrootglas'></i>
+			</label>
+			<div class='header__searchbar-field'>
+				<input type="text" name="s" id="search" value=""></input>
+			</div>
+		</form>
+	</div>
+
 </header>
+
+{{#if leaderboard}}
+{{> helpers/leaderboard items=leaderboard}}
+{{/if}}

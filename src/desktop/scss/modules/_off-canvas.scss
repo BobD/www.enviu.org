@@ -1,0 +1,48 @@
+.off-canvas{
+	background: $theme;	
+	color: $white;
+	height:  0%;
+	width: 100%;
+	visibility: hidden;
+	transition: all $transition-duration;
+	text-align: center;
+
+	.admin-bar &{
+		&,
+		.off-canvas__close{
+			margin-top:  $wp-admin-bar-height; 
+		}
+
+		@media screen and ( max-width: 782px ) {
+			&,
+			.off-canvas__close{
+				margin-top:  $wp-admin-bar-height-plus;
+			}
+		}
+	}
+
+	.main--off-canvas &{
+		visibility: visible;
+		height:100%;
+	}
+
+	.section__header{
+		color: $white;
+		padding-top: 6em;
+	}
+
+	.cell__header{
+		&,
+		> *{
+			color: $white;
+		}
+	}
+
+	.off-canvas__close{
+		position: absolute;
+		top: 5em;
+		right: 2em;
+		color: $white;
+	}
+
+}

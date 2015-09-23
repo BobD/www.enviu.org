@@ -1,0 +1,26 @@
+.social-follow{
+	display: inline-block;
+}
+
+.social-follow__list{
+
+}
+
+.social-follow__item{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 1em;
+
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.social-follow__link{
+	color: inherit;
+	text-decoration: none;
+
+	&:hover{
+		color: $theme-dark;
+	}
+}

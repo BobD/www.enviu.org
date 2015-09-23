@@ -17,7 +17,7 @@
 
 .quote__header{
 	color: $theme;
-	font-weight: 700;
+	@include bold();
 	margin-bottom: 1em;
 }
 

@@ -84,3 +84,10 @@
         outline: 0;
     }
 }
+
+
+@include respond-to(mobile) {
+    .slick-arrow{
+      display: none !important;
+    }
+}

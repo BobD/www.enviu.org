@@ -1,4 +1,74 @@
 .icon{
-    font-size: 1.5em !important;
+    font-size: 1.5em;
     vertical-align: middle;
+}
+
+[class^="icon-"], 
+[class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Enviu_icons_vergrootglas:before {
+	content: "\e600";
+}
+.icon-Enviu_icons_facebook:before {
+	content: "\e601";
+}
+.icon-Enviu_icons_twitter:before {
+	content: "\e602";
+}
+.icon-Enviu_icons_linkedin:before {
+	content: "\e603";
+}
+.icon-Enviu_icons_facebook_circle:before {
+	content: "\e604";
+}
+.icon-Enviu_icons_twitter_circle:before {
+	content: "\e605";
+}
+.icon-Enviu_icons_linkedin_circle:before {
+	content: "\e606";
+}
+.icon-Enviu_icons_skype_circle:before {
+	content: "\e607";
+}
+.icon-Enviu_icons_pijl_rechts:before {
+	content: "\e608";
+}
+.icon-Enviu_icons_pijl_beneden:before {
+	content: "\e609";
+}
+.icon-Enviu_icons_button_invest_entrepreneur:before {
+	content: "\e60a";
+}
+.icon-Enviu_icons_scroll_down:before {
+	content: "\e60b";
+}
+.icon-Enviu_icons_locatiemarker:before {
+	content: "\e60c";
+}
+.icon-Enviu_icons_tag:before {
+	content: "\e60d";
+}
+.icon-Enviu_icons_persoon:before {
+	content: "\e60e";
+}
+.icon-Enviu_icons_envelop:before {
+	content: "\e60f";
+}
+.icon-Enviu_icons_telefoon:before {
+	content: "\e610";
+}
+.icon-Enviu_icons_fax:before {
+	content: "\e611";
 }

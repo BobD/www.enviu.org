@@ -19,7 +19,7 @@
 }
 
 @mixin logo(){  
-  background-image: url('../images/assets/enviu_logo.svg');
+  background-image: url('../images/static/enviu_logo.svg');
   background-repeat: no-repeat;
   background-position: left center;
   text-indent: -1000em;
@@ -44,7 +44,7 @@
 
 %container-narrow {
   @extend %container;
-  max-width: $site-max-width * .66;
+  max-width: $site-max-width * $section-narrow-width;
 }
 
 

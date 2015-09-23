@@ -6,115 +6,185 @@
 
     {{> sections/meta}}
 
-    <body class='main'>
+    <body class='main main--home' id='page'>
 
     	<div class='main__container'>
 		
-			{{> sections/header leaderboard=content.leaderboard.about active='about'}}
+			{{> sections/header active=''}}
+
+			<ul class='section-nav'>
+				<li class='section-nav__item active'>
+					<a class='section-nav__link scrolldown--effect' href='#page'>
+						<i class='icon fa fa-dot-circle-o'></i>
+					</a>
+				</li>
+				<li class='section-nav__item'>
+					<a class='section-nav__link scrolldown--effect' href='#facts'>
+						<i class='icon fa fa-dot-circle-o'></i>
+					</a>
+				</li>
+				<li class='section-nav__item'>
+					<a class='section-nav__link scrolldown--effect' href='#case'>
+						<i class='icon fa fa-dot-circle-o'></i>
+					</a>
+				</li>
+				<li class='section-nav__item'>
+					<a class='section-nav__link scrolldown--effect' href='#news'>
+						<i class='icon fa fa-dot-circle-o'></i>
+					</a>
+				</li>
+				<li class='section-nav__item'>
+					<a class='section-nav__link scrolldown--effect' href=''>
+						<i class='icon fa fa-dot-circle-o'></i>
+					</a>
+				</li>
+			</ul>
+
+			{{> helpers/leaderboard-home}}
 
 	        <main class='content'>
 
-	        	<section class='section section--narrow'>
-					{{> helpers/article state='article--lead'}}
-				</section>
+				<section class='section' id='facts'>
 
-				<section class='section'>
-					{{> helpers/excerpt title='Vision' image='images/leaderboard/lb-2.png'}}
-					{{> helpers/excerpt title='Mission' image='images/leaderboard/lb-5.jpg' state='excerpt--right'}}
-					{{> helpers/excerpt title='History' image='images/leaderboard/lb-4.jpg'}}
-				</section>
+					<div class='section__page-vertical-center'>
 
-				<section class='section'>
+						<header class='section__header'>
+					    	<h2 class='section__header-title'>We strive for impact driven ventures</h2>
+					    	<h3 class='section__header-description'>Some facts and figures</h3>
+		        		</header>
 
-					<header class='section__header'>
-				    	<h2 class='section__header-title'>Enviu process</h2>
-				    	<h3 class='section__header-description'>From idea to BV</h3>
-	        		</header>
+						<div class='facts'>
+							<img class='facts__visual facts__visual--one' src='images/static/facts_1.svg'/>
+							<img class='facts__visual facts__visual--two' src='images/static/facts_2.svg'/>
+							<img class='facts__visual facts__visual--three' src='images/static/facts_3.svg'/>
+							<img class='facts__visual facts__visual--four' src='images/static/facts_4.svg'/>
+						</div>
 
-					<div class='grid grid--column-3 grid--articles'>
-						
-						<div class='grid__item'>
+						{{> helpers/button title="Read more about Enviu" link='about.html' icon='icon-Enviu_icons_pijl_rechts' type='large'}}
 
-							<div class='grid__item-content'>
+					</div>
 
-								<article class='article article--column article--column-clean'>
+	        	</section>
 
-									<header class='article__header'>
+	        	<section class='section section--streched' id='case'>	
+	        		<div class='section__page-vertical-center'>
+	        			<div class='case'>
+	        				<div class='case__container'>
+	        					<div class='case__visual' style='background-image: url(images/assets/Pondicherry-rickshaw-driver.jpeg)'>
+		        				</div>
+		        				<div class='case__content'>
+		        					<h2 class='case__header'>Our most recent case</h2>
+									<div class='case__body'>
+										<img src='images/assets/bangladore_india_1.png'/>
+										<h3>Three Wheels United</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+										<div class='case__buttons'>
+											{{> helpers/button title="View this case" link='case.html' icon='icon-Enviu_icons_pijl_rechts' type='button--light'}}
 
-										<img src='images/assets/enviu_lamp.svg' class='article__header-image'/>
-
-										<div class='article__header-super'>Step one</div>
-										<div class='article__header-title'>Ideation</div>
-										<div class='article__header-sub'>1-2 months</div>
-									</header>
-
-									<div class='article__content'>
-
-										<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-										</p>
-
+											{{> helpers/button title="Or go to 'our work'" link='work.html' icon='icon-Enviu_icons_pijl_rechts' type='button--light'}}
+										</div>
 									</div>
+		        				</div>
+		        			</div>
+	        			</div>
+					</div>
+				</section>
 
-								</article>
+	        	<section class='section' id='news'>
+
+	        		<div class='section__page-vertical-center'>
+
+						<header class='section__header'>
+					    	<h2 class='section__header-title'>Recent news</h2>
+					    	<h3 class='section__header-description'>Because we're always in motion</h3>
+		        		</header>
+
+						<div class='grid grid--column-3 grid--articles'>
+							
+							<div class='grid__item'>
+
+								<div class='grid__item-content'>
+
+									{{> helpers/cell type='news' tag='blog' image='images/leaderboard/lb-5.jpg' title='30 april 2015' button_title='Read' button_link='news.html' description='Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}}
+
+								</div>
+
+							</div>
+
+							<div class='grid__item'>
+
+								<div class='grid__item-content'>
+
+									{{> helpers/cell type='news' tag='event' image='images/leaderboard/lb-4.jpg' title='30 april 2015' button_title='Read' button_link='news.html' description='Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}}
+
+								</div>
+
+							</div>
+
+
+							<div class='grid__item'>
+
+								<div class='grid__item-content'>
+
+									{{> helpers/cell type='news' tag='article' image='images/assets/landscape.png' title='30 april 2015' button_title='Read' button_link='news.html' description='Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}}
+
+								</div>
 
 							</div>
 
 						</div>
 
+						{{> helpers/button title="Go to our news section" link='news.html' icon='icon-Enviu_icons_pijl_rechts' type='button--large'}}
+
+					</div>
+
+				</section>
+
+				<!-- <section class='section section--narrow'>
+
+					<div class='section__page-vertical-center'>
+
+						<header class='section__header'>
+					    	<h2 class='section__header-title'>We believe in people</h2>
+					    	<h3 class='section__header-description'>Meet our team</h3>
+		        		</header>
+
+		        		<div class='grid grid--column-4 grid--articles'>
+
+						{{#each content.people}}
 						<div class='grid__item'>
 
 							<div class='grid__item-content'>
-								
-								<article class='article article--column article--column-clean'>
-
-									<header class='article__header'>
-
-										<img src='images/assets/enviu_roset.svg' class='article__header-image'/>
-
-										<div class='article__header-super'>Step two</div>
-										<div class='article__header-title'>Validation</div>
-										<div class='article__header-sub'>8-16 months</div>
-									</header>
-
-									<div class='article__content'>
-
-										<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-										</p>
-
-									</div>
-
-								</article>
-
+								{{> helpers/cell-people type='people' image=image title=title button_title='Read'}}
 							</div>
 
 						</div>
+						{{/each}}
 
 						<div class='grid__item'>
 
-							<div class='grid__item-content'>
-								
-								<article class='article article--column article--column-clean'>
+							<div class='cell cell--people cell--people-you'>
 
-									<header class='article__header'>
+								<header class='cell__header'>
+									<div class='cell__image' src='{{image}}'>
+										<i class='icon fa fa-question'></i>
+									</div>
+								</header>
 
-										<img src='images/assets/enviu_raket.svg' class='article__header-image'/>
+								<div class='cell__content'>
 
-										<div class='article__header-super'>Step three</div>
-										<div class='article__header-title'>Startup</div>
-										<div class='article__header-sub'>2 years</div>
-									</header>
+									<div class='cell__content-container'>
 
-									<div class='article__content'>
-
-										<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-										</p>
+										<div class='cell__title'>You?</div>
+										<div class='cell__body'>
+											If you think you and Enviu are a match, please let us know.
+										</div>
 
 									</div>
 
-								</article>
+									{{> helpers/button title="Go to vancancies" link='' icon='icon-Enviu_icons_pijl_beneden' type='large'}}
+									
+								</div>
 
 							</div>
 
@@ -122,18 +192,7 @@
 
 					</div>
 
-				</section>
-
-				<section class='section'>
-
-					<header class='section__header'>
-				    	<h2 class='section__header-title'>Partners &amp; clients</h2>
-				    	<h3 class='section__header-description'>Together we can make a difference</h3>
-	        		</header>
-
-					{{> helpers/grid items=content.clients colums=6}}
-
-				</section>
+	        	</section> -->
 
 			</main>
 

@@ -1,0 +1,39 @@
+.social-share{
+	background-color: $theme;
+	color: $white;
+	padding: .5em 1em;
+	border-radius: $border-radius;
+	display: inline-block;
+}
+
+.social-share__title{
+	display: inline-block;
+	color: $yellow;
+	margin-right: 1em;
+	@include bold();
+
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.social-share__list{
+	display: inline-block;
+}
+
+.social-share__item{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: .5em;
+}
+
+.social-share__link{
+	position: relative;
+	color: inherit;
+	font-size: 1.4em;
+	text-decoration: none;
+
+	&:hover{
+		color: $theme-dark;
+	}
+}

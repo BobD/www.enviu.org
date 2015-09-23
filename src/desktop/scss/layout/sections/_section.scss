@@ -1,7 +1,7 @@
 .section{
 	@extend %container;
-	margin-top: 5em;
-	margin-bottom: 5em;
+	margin-top: 6em;
+	margin-bottom: 6em;
 
 	&--narrow{
 		@extend %container-narrow;
@@ -26,20 +26,107 @@
 	&--center{
 		text-align: center;
 	}
+
+	&--how-we-work{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&--streched{
+		max-width: none;
+	}
+}
+
+.section__page-vertical-center{
+ 	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	padding-top: 5em;
+  	text-align: center;
 }
 
 .section__header{
 	color: $theme;
-	text-align: center;
 	margin-bottom: 4em;
+	text-align: center;
 
 	> .section__header-title{
 		@include setType(6, $ms-up2);
-		font-weight: bold;
+		@include bold();
 	}
 
 	> .section__header-description{
 		@include setType(4, $ms-up2);
 		font-weight: normal;
+	}
+}
+
+@include respond-to(mobile) {
+	.section{
+		min-width: 0;
+		max-width: none;
+		margin-left: $section-padding-mobile;
+		margin-right: $section-padding-mobile;
+		margin-top: 3em;
+		margin-bottom: 3em;
+
+		&--excerpt{
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&--sidebar{
+			.section__sidebar{
+				float: none;
+				width: 100%;
+				margin-bottom: 2em;
+			}
+		}
+
+		&--streched{
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.section__page-vertical-center{
+		position: relative;
+  		top: auto;
+  		transform: none;
+  		padding-top: 0;
+	}
+}
+
+@include respond-to(tablet) {
+	.section{
+		min-width: 0;
+		max-width: none;
+		margin-left: $section-padding-tablet;
+		margin-right: $section-padding-tablet;
+
+		&--excerpt{
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&--narrow{
+			// Keep this in sync with the %container-narrow extend in the mixons.scss
+			// Annoying i know, but you can not use mixins/extends out of the media query scope..
+			max-width: $site-max-width * $section-narrow-width;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&--streched{
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.section__page-vertical-center{
+			position: relative;
+	  		top: auto;
+	  		transform: none;
+	  		padding-top: 0;
+		}
 	}
 }

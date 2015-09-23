@@ -5,3 +5,8 @@
 @import "layout";
 @import "modules";
 @import "state";
+
+// Temporary hack, see 30 day webfont loading from easy.myfonts.net/
+#mfPreviewBar{
+	display: none;
+}

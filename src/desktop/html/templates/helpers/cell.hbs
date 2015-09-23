@@ -1,0 +1,50 @@
+<div class='cell {{#if type}}cell--{{type}}{{/if}}'>
+
+	<header class='cell__header'>
+		<div class='cell__image' style='background-image:url("{{image}}")'></div>
+	</header>
+
+	<div class='cell__content'>
+
+		<div class='cell__content-container'>
+{{!-- 
+			{{#equals type 'news'}}
+			<div class='cell__tag cell__tag--{{tag}}'>
+				{{tag}}
+			</div>
+			{{/equals}} --}}
+
+			<div class='cell__title'>
+				{{title}}
+			</div>
+
+			{{#equals type 'location'}}
+			<ul class='cell__list'>
+				<li class='cell__list-item'>
+					<i class='icon fa fa-map-marker'></i>
+					<span class='cell__list-title'>Bangladore</span>
+					<span class='cell__list-title'>India</span>
+				</li>
+				<li class='cell__list-item'>
+					<i class='icon fa fa-tag'></i>
+					<span class='cell__list-title'>Crowdfunding</span>
+				</li>
+			</ul>
+
+			<p class='cell__body'>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			</p>
+			{{/equals}}
+
+{{!-- 			{{#equals type 'news'}}
+			<p class='cell__body'>{{description}}</p>
+			{{/equals}} --}}
+
+		</div>
+		
+		{{> helpers/button title=button_title link=button_link icon='icon-Enviu_icons_pijl_rechts'}}
+
+	</div>
+
+</div>
+								

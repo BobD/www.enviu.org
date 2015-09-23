@@ -15,13 +15,8 @@
 	        <main class='content'>
 
 	        	<section class='section section--narrow'>
-	        		{{> helpers/article state='article--regular article--lead'}}
-	        		{{> helpers/button title='Check out our Open Calls' link='' icon='fa-arrow-circle-o-down'}}
-	        	</section>
-
-	        	<section class='section section--narrow'>
-	        		{{> helpers/article title='Become a strategic partner'}}
-	        		{{> helpers/article title='Start-ups'}}
+	        		{{> helpers/article-page state='article--regular article--lead'}}
+	        		{{> helpers/button title='Check out our Open Calls' link='' icon='icon-Enviu_icons_pijl_beneden'}}
 	        	</section>
 
 	        	<section class='section'>
@@ -37,23 +32,17 @@
 
 							<div class='grid__item-content'>
 
-								<article class='article article--column'>
+								{{> helpers/cell image='images/assets/Our-Oceans-Challenge_Header_img-1600x430.png' title='Help us clean the ocean from plastic. We are looking for 14 volunteers!' button_title='Yes I want to help!'}}
+								
+							</div>
 
-									<header class='article__header'>
-										<div class='article__header-image'></div>
-									</header>
+						</div>
 
-									<div class='article__content'>
+						<div class='grid__item'>
 
-										<p>
-											Help us clean the ocean from plastic. We are looking for 14 volunteers!
-										</p>
+							<div class='grid__item-content'>
 
-										{{> helpers/button title='Yes i want to help!' link='' icon='fa-arrow-circle-o-right'}}
-
-									</div>
-
-								</article>
+								{{> helpers/cell image='images/assets/landscape.png' title='Submit your ideas to help recovering our rainforrests.' button_title='I have an idea'}}
 
 							</div>
 
@@ -62,50 +51,8 @@
 						<div class='grid__item'>
 
 							<div class='grid__item-content'>
-								
-								<article class='article article--column'>
 
-									<header class='article__header'>
-										<div class='article__header-image'></div>
-									</header>
-
-									<div class='article__content'>
-
-										<p>
-										Submit your ideas to help recovering our rainforrests.
-										</p>
-
-										{{> helpers/button title='I have an idea' link='' icon='fa-arrow-circle-o-right'}}
-
-									</div>
-
-								</article>
-
-							</div>
-
-						</div>
-
-						<div class='grid__item'>
-
-							<div class='grid__item-content'>
-								
-								<article class='article article--column'>
-
-									<header class='article__header'>
-										<div class='article__header-image'></div>
-									</header>
-
-									<div class='article__content'>
-
-										<p>
-										Local commuinities are looking for clean energy producers.
-										</p>
-
-										{{> helpers/button title="I'm the one you're looking for" link='' icon='fa-arrow-circle-o-right'}}
-
-									</div>
-
-								</article>
+								{{> helpers/cell image='images/assets/Header-1600x430.png' title='Local commuinities are looking for clean energy producers.' button_title="I'm the one you're looking for"}}
 
 							</div>
 

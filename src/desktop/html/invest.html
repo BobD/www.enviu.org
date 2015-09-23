@@ -15,9 +15,7 @@
 	        <main class='content'>
 
         		<section class='section section--narrow'>
-					{{> helpers/article state='article--lead'}}
-					{{> helpers/article title='Lotem ipsum'}}
-	        		{{> helpers/article title='Nullam tempus malesuada'}}
+					{{> helpers/article-page}}
 				</section>
 
 				<section class='section'>
@@ -33,23 +31,7 @@
 
 							<div class='grid__item-content'>
 
-								<article class='article article--column'>
-
-									<header class='article__header'>
-										<div class='article__header-image'></div>
-									</header>
-
-									<div class='article__content'>
-
-										<p>
-											Help us clean the ocean from plastic. We are looking for 14 volunteers!
-										</p>
-
-										{{> helpers/button title='Show this venture!' link='' icon='fa-arrow-circle-o-right'}}
-
-									</div>
-
-								</article>
+								{{> helpers/cell image='images/leaderboard/lb-5.jpg' title='Three Wheels United' button_title='Show this venture!' type='location'}}
 
 							</div>
 
@@ -58,24 +40,8 @@
 						<div class='grid__item'>
 
 							<div class='grid__item-content'>
-								
-								<article class='article article--column'>
 
-									<header class='article__header'>
-										<div class='article__header-image'></div>
-									</header>
-
-									<div class='article__content'>
-
-										<p>
-											Submit your ideas to help recovering our rainforrests.
-										</p>
-
-										{{> helpers/button title='Show this venture' link='' icon='fa-arrow-circle-o-right'}}
-
-									</div>
-
-								</article>
+								{{> helpers/cell image='images/leaderboard/lb-4.jpg' title='Youth Got The Power' button_title='Show this venture!' type='location'}}
 
 							</div>
 
@@ -86,7 +52,7 @@
 
 				</section>
 
-				<section class='section'>
+				<section class='section section--streched'>
 	        		<header class='section__header'>
 	        			<h2 class='section__header-title'>Enviu's Ventures</h2>
 				    	<h3 class='section__header-description'>Succesfull business examples</h3>

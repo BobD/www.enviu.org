@@ -1,6 +1,6 @@
 {
 	"navigation": [
-		{"title": "about", "url": "index.html"},
+		{"title": "about", "url": "about.html"},
 		{"title": "our work", "url": "work.html"},
 		{"title": "people", "url": "people.html"},
 		{"title": "news", "url": "news.html"},
@@ -8,15 +8,18 @@
 	],
 
 	"leaderboard": {
+		"home": {
+			"title": "",
+			"description": "We want the global economy to be inclusive and serve people and planet",
+			"items": [
+				{"url": "", "image": "images/assets/dancefloor.jpg"}
+			]
+		},
 		"about": {
 			"title": "About",
-			"description": "Enviu' positioning and process",
+			"description": "Positioning and proces",
 			"items": [
-				{"url": "", "image": "images/leaderboard/lb-1.png"},
-				{"url": "", "image": "images/leaderboard/lb-2.png"},
-				{"url": "", "image": "images/leaderboard/lb-3.png"},
-				{"url": "", "image": "images/leaderboard/lb-4.jpg"},
-				{"url": "", "image": "images/leaderboard/lb-5.jpg"}
+				{"url": "", "image": "images/leaderboard/about.jpg"}
 			]
 		},
 		"collaborate": {
@@ -30,14 +33,35 @@
 			"title": "Contact",
 			"description": "Let's keep in touch",
 			"items": [
-				{"url": "", "image": "images/leaderboard/lb-2.png"}
+				{"url": "", "image": "images/leaderboard/contact.jpg"}
 			]
 		},
 		"work": {
+			"title": "Our work",
+			"description": "Some cases that matter",
+			"items": [
+				{"url": "", "image": "images/leaderboard/work.jpg"}
+			]
+		},
+		"case": {
 			"title": "Case",
 			"description": "Three Wheels United",
 			"items": [
-				{"url": "", "image": "images/leaderboard/lb-5.jpg"}
+				{"url": "", "image": "images/leaderboard/work.jpg"}
+			]
+		},
+		"news": {
+			"title": "News",
+			"description": "Read all about it",
+			"items": [
+				{"url": "", "image": "images/leaderboard/news.jpg"}
+			]
+		},
+		"people": {
+			"title": "People",
+			"description": "Power of the crowd",
+			"items": [
+				{"url": "", "image": "images/leaderboard/people.jpg"}
 			]
 		},
 		"invest": {
@@ -78,7 +102,34 @@
 		{"title": "Team member 11",  "url": "", "image": ""}
 	],
 
-	"articles": {
+	"news": [
+		{"tag": "article", "title": "30 april 2015",  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "url": "", "image": "images/assets/vision.jpg"},
+		{"tag": "blog", "title": "30 april 2015",  "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",  "url": "", "image": "images/assets/eten_drinken.png"},
+		{"tag": "event", "title": "30 april 2015",  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",  "url": "", "image": "images/assets/landscape.png"},
+		{"tag": "download", "title": "10 juni 2015",  "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",   "url": "", "image": "images/assets/entrepreneur-223x150.jpg"},
+		{"tag": "article", "title": "30 april 2015",  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",  "url": "", "image": "images/assets/vision.jpg"},
+		{"tag": "article", "title": "30 april 2015",  "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",  "url": "", "image": "images/assets/eten_drinken.png"},
+		{"tag": "article", "title": "30 april 2015",  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",  "url": "", "image": "images/assets/entrepreneur-223x150.jpg"},
+		{"tag": "article", "title": "30 april 2015",  "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",  "url": "", "image": "images/assets/eten_drinken.png"},
+		{"tag": "article", "title": "30 april 2015",  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",  "url": "", "image": "images/assets/vision.jpg"},
+		{"tag": "article", "title": "30 april 2015",  "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", "url": "", "image": "images/assets/eten_drinken.png"},
+		{"tag": "article", "title": "30 april 2015",  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",  "url": "", "image": "images/assets/landscape.png"},
+		{"tag": "article", "title": "30 april 2015",  "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",  "url": "", "image": "images/assets/eten_drinken.png"}
+	],
 
-	}
+	"people": [
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_james_kape_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Annemarie Spies", "image": "images/assets/rollover_WHITE_PHOTO_angela_k_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_chris_w_1_portrait.jpg", "over_image": "images/assets/rollover_WHITE_PHOTO_chris_w_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Annemarie Spies", "image": "images/assets/SENSIBLE_WHITE_PHOTO_lisa_s_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_james_kape_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Annemarie Spies", "image": "images/assets/rollover_WHITE_PHOTO_angela_k_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_chris_w_1_portrait.jpg", "over_image": "images/assets/rollover_WHITE_PHOTO_chris_w_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Annemarie Spies", "image": "images/assets/SENSIBLE_WHITE_PHOTO_lisa_s_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_james_kape_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Annemarie Spies", "image": "images/assets/rollover_WHITE_PHOTO_angela_k_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_chris_w_1_portrait.jpg", "over_image": "images/assets/rollover_WHITE_PHOTO_chris_w_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Annemarie Spies", "image": "images/assets/SENSIBLE_WHITE_PHOTO_lisa_s_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_james_kape_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"}
+	]
 }

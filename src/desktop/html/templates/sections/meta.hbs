@@ -20,6 +20,7 @@
         var environment = 'develop';
     </script>
 
+    <script src="scripts/vendors/scrollmagic.min.js"></script>
     <script data-main="scripts/main" src="scripts/require.js"></script>
 
     <!--[if gte IE 9]>
@@ -29,4 +30,32 @@
         }
       </style>
     <![endif]-->
+
+    <script type="text/javascript">
+        (function() {
+            var path = '//easy.myfonts.net/v2/js?sid=253753(font-family=Campton+Book)&sid=253758(font-family=Campton+Light)&sid=253764(font-family=Campton+SemiBold)&key=1Bin47ucm4',
+                protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+                trial = document.createElement('script');
+            trial.type = 'text/javascript';
+            trial.async = true;
+            trial.src = protocol + path;
+            var head = document.getElementsByTagName("head")[0];
+            head.appendChild(trial);
+        })();
+    </script>
+
+
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src:url('fonts/icomoon.eot?-z1jtwd');
+            src:url('fonts/icomoon.eot?#iefix-z1jtwd') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?-z1jtwd') format('truetype'),
+                url('fonts/icomoon.woff?-z1jtwd') format('woff'),
+                url('fonts/icomoon.svg?-z1jtwd#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+
 </head>

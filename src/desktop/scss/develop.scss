@@ -6,7 +6,7 @@
 @include respond-to(mobile) {
 	body{
 		&:before{
-			content: 'mobile screen';
+			content: 'mobile';
 			display: block;
 			position: fixed;
 			bottom: 0;
@@ -19,10 +19,10 @@
 	}
 }
 
-@include respond-to(small) {
+@include respond-to(tablet) {
 	body{
 		&:before{
-			content: 'small screen';
+			content: 'tablet';
 			display: block;
 			position: fixed;
 			bottom: 0;
@@ -35,26 +35,10 @@
 	}
 }
 
-@include respond-to(medium) {
+@include respond-to(desktop) {
 	body{
 		&:before{
-			content: 'medium screen';
-			display: block;
-			position: fixed;
-			bottom: 0;
-			right: 0;
-			color: black;
-			background: yellow;
-			padding: 5px 10px;
-			border: thin solid black;
-		}
-	}
-}
-
-@include respond-to(large) {
-	body{
-		&:before{
-			content: 'large screen';
+			content: 'desktop';
 			display: block;
 			position: fixed;
 			bottom: 0;

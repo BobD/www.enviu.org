@@ -1,7 +1,7 @@
 .caroussel{
 	height: 200px;
-	margin-left: -$caroussel__item-padding;
-	margin-right: -$caroussel__item-padding;
+	margin-left: 4em;
+	margin-right: 4em;
 }
 
 .caroussel__item{
@@ -39,18 +39,19 @@
 .caroussel__info{
 	z-index: 1;
 	top: 10em;
-	background: $grey-light;
+	background: $grey-lighter;
 	padding: 1em;
 	transition: all $transition-duration;
 	border-bottom-left-radius: $border-radius;
 	border-bottom-right-radius: $border-radius;
+	position: relative;
 }
 
 .caroussel__info-open{
 	position: absolute;
 	bottom: 100%;
 	left: 1em;
-	background: $grey-light;
+	background: $grey-lighter;
 	padding: 0 .5em;
 	color: $theme;
 	font-size: 1.2em;
@@ -76,10 +77,11 @@
 }
 
 .caroussel__info-list-item{
-	line-height: 1.2em;
+	line-height: 1.4em;
 
 	.icon{
-		margin-right: .5em;
+		margin-right: .3em;
+		font-size: 1.1em;
 	}
 	
 	.icon,
@@ -91,29 +93,40 @@
 
 .caroussel__info-body{
 	@include setType(2.5, $base-em-font-size);
+	height: 3.8 * $base-em-font-size;
+	overflow: hidden;
 	margin-bottom: 1em;
 }
 
 .caroussel__info-footer{
 
-	.social{
+	.social-share{
 		background: transparent;
 		padding: 0;
 
-		.social__title{
-			display: none;
+		.social-share__list{
+			vertical-align: middle;
 		}
 
-		.social__item{
-			border: 1em solid $theme;
-
-			&:hover{
-				border-color: $theme-dark;
-			}
-			
-			.icon{
-				color: $white;
-			}
+		.social-share__title{
+			display: inline-block;
+			vertical-align: middle;
+			color: $theme;
+			width: 7em;
+			line-height: 1em;
+			margin-left: 1em;
 		}
+
+		.social-share__item{
+			color: $theme;
+		}
+	}
+}
+
+
+@include respond-to(mobile) {
+	.caroussel{
+		margin-left: 0;
+		margin-right: 0;
 	}
 }

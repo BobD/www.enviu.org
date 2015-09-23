@@ -10,9 +10,74 @@
 
     	<div class='main__container'>
 		
-			{{> sections/header leaderboard=content.leaderboard.work  active='our work'}}
+			{{> sections/header leaderboard=content.leaderboard.work active='our work'}}
 
 	        <main class='content'>
+
+        		<section class='section section--narrow'>
+					{{> helpers/article-lead}}
+				</section>
+
+				<section class='section'>
+
+					<header class='section__header'>
+				    	<h2 class='section__header-title'>Cases</h2>
+				    	<h3 class='section__header-description'>Our greatest succes stories</h3>
+	        		</header>
+
+					<div class='grid grid--column-3 grid--articles'>
+						
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								{{> helpers/cell-project image='images/leaderboard/lb-5.jpg' title='Three Wheels United' button_title='View this case' button_link='case.html'}}
+
+							</div>
+
+						</div>
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								{{> helpers/cell-project image='images/leaderboard/lb-4.jpg' title='Youth Got The Power' button_title='View this case' button_link='case.html'}}
+
+							</div>
+
+						</div>
+
+
+						<div class='grid__item'>
+
+							<div class='grid__item-content'>
+
+								{{> helpers/cell-project image='images/assets/landscape.png' title='Commonland' button_title='View this case' button_link='case.html'}}
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+				</section>
+
+				<section class='section section--streched'>
+	        		<header class='section__header'>
+	        			<h2 class='section__header-title'>Recent projects</h2>
+				    	<h3 class='section__header-description'>What we have done so far</h3>
+	        		</header>
+					{{> helpers/caroussel items=content.ventures}}
+				</section>
+
+				<section class='section section--narrow'>
+					{{> helpers/quote body='Working together with Enviu has been a real help to create a meaningfull network. Within three years we have become financially indepenet' person='Karel de Clerk' source='Milieu Centraal' link=''}}
+				</section>
+
+				<section class='section section--center'>
+					{{> helpers/button title="How to become a partner" link='' icon='icon-Enviu_icons_pijl_rechts'}}
+	        	</section>
 
 			</main>
 

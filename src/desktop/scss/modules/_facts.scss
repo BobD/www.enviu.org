@@ -25,3 +25,19 @@
 		left: 3%;
 	}
 }
+
+@include respond-to(mobile) {
+	.facts__visual{
+
+		&--one,
+		&--two,
+		&--three,
+		&--four{
+			height: 6em;
+			width: auto;
+			top:  auto;
+			left: auto;
+			display: block !important;
+		}
+	}
+}

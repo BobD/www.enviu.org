@@ -1,0 +1,127 @@
+.case{
+	text-align: left;
+
+	@include box-ratio(55%, '.case__container');
+}
+
+.case__container{
+}
+
+.case__content,
+.case__visual{
+	height: 100%;
+}
+
+.case__visual{
+	float: right;
+}
+
+.case__visual{
+	width: 50%;
+	background-repeat: none;
+	background-size: cover;
+	background-position: center center;
+}
+
+.case__content{
+	float: left;
+	width: 50%;
+	background: $theme;
+	padding: 3em 5em;
+
+	img{
+		float: left;
+		margin: 2em;
+	}
+
+	h3{
+		color: $white;
+	}
+}
+
+.case__header{
+	color: $white;
+	margin-bottom: 1em;
+	@include setType(4, $ms-up2);
+}
+
+.case__buttons{
+	position: absolute;
+	bottom: 3em;
+	left: 4em;
+
+	.button{
+		margin-top: 1em;
+		margin-right: 1em;
+	}
+}
+
+@include respond-to(mobile) {
+	.case{
+
+		.case__container{
+			position: relative;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: auto;
+		}
+
+
+		&:before{
+			display: none;
+		}
+
+		.case__content,
+		.case__visual{
+			float: none;
+			width: 100%;
+			height: auto;
+		}
+
+		.case__visual{
+			@include box-ratio(100%, '.case__container');
+		}
+
+		.case__buttons{
+			position: relative;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+@include respond-to(tablet) {
+	.case{
+
+		.case__container{
+			position: relative;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: auto;
+		}
+
+
+		&:before{
+			display: none;
+		}
+
+		.case__content,
+		.case__visual{
+			float: none;
+			width: 100%;
+			height: auto;
+		}
+
+		.case__visual{
+			@include box-ratio(100%, '.case__container');
+		}
+
+		.case__buttons{
+			position: relative;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}

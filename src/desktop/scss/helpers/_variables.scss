@@ -2,8 +2,9 @@
 $white:								white;
 $black:								#1A1A1A;
 $grey:								#333333;
-$grey-light:						#F7F7F7;
-$yellow:							#ECE24B;
+$grey-light:						#8E8E8E;
+$grey-lighter:						#F7F7F7;
+$yellow:							#F5E460;
 $theme-extra-light:					#54CBDA;
 $theme-light:						#54CBDA;
 $theme:								#1EB5CA;
@@ -13,6 +14,11 @@ $page-background-color:				$site-background-color;
 $text-color:						$black;
 $link-color:						inherit;
 $Leaderboard-background:			$theme;
+$cat-blog-color:					#84BF38;
+$cat-event-color:					#DA8328;
+$cat-article-color:					#514191;	
+$cat-download-color:				#E53D6C;			
+
 
 // Dimensions
 $vertical-padding:					1em;
@@ -23,15 +29,21 @@ $site-max-width:					900px;
 $box-ratio:							45%;
 $caroussel__item-padding: 			1em;
 $grid__item-padding:				1em;
+$section-narrow-width:				.66;
 
-// 
-$border-radius:						4px;
-
-// Effects
+// Effects and styling
 $transition-duration:				0.4s;
+$border-radius:						4px;
 
 // https://github.com/ianrose/typesettings
 $base-font-size: 					12px;
+// $ms-ratio:							2;
+
+
+// Other
+$wp-admin-bar-height:				32px;
+$wp-admin-bar-height-plus:			46px;
+
 
 
 // Responsive
@@ -42,10 +54,11 @@ $base-font-size: 					12px;
 // Using em's in case the page get's zoomed in
 // ----
 
-$screen:       "only screen and";
+$section-padding-tablet:			2em;
+$section-padding-mobile:			2em;
+$screen:       						"only screen and";
 $breakpoints: (
-  'mobile'  		: '#{$screen} ( max-width: 320px )',
-  'small'  			: '#{$screen} ( min-width: 321px )  and ( max-width: 49.999em )',
-  'medium' 			: '#{$screen} ( min-width: 50em ) and ( max-width: 84.999em )',
-  'large'  			: '#{$screen} ( min-width: 85em )'
+  'mobile'  		: '#{$screen} ( max-width: 480px )',
+  'tablet'  		: '#{$screen} ( min-width: 480.1px )  and ( max-width: 768px )',
+  'desktop' 		: '#{$screen} ( min-width: 768.1px )'
 );

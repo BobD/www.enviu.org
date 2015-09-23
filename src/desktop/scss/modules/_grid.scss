@@ -33,7 +33,7 @@
 
 %grid-column-4{
 	@extend %grid-column;
-	.grid__item{width: 20%;}
+	.grid__item{width: 25%;}
 }
 
 %grid-column-5{
@@ -69,8 +69,6 @@
 .grid{
 	position: relative;
 	overflow: hidden;
-	margin-left: -$grid__item-padding;
-	margin-right: -$grid__item-padding;
 
 	&--column-1{
 		@extend %grid-column-1;
@@ -114,21 +112,11 @@
 
 	&--articles{
 
-
 		.grid__item{
-			padding: 0 1em;
-
+			padding: 1em;
 
 			&:before{
 				display: none;
-			}
-
-			&:first-child{
-				padding-left: 0;
-			}
-
-			&:last-child{
-				padding-right: 0;
 			}
 		}
 
@@ -147,6 +135,7 @@
 		.grid__item{
 			display: inline-block;
 			float: none;
+			vertical-align: top;
 		}
 	}
 }
@@ -177,10 +166,6 @@
 	background-color: #8E8E8E;
 }
 
-.grid__info{
-
-}
-
 // Annoying that you cannot extend out of scope of the media query..
 @include respond-to(mobile) {
 	.grid{
@@ -188,7 +173,7 @@
 	}
 }
 
-@include respond-to(small) {
+@include respond-to(tablet) {
 	.grid{
 		.grid__item{width: 33.33%;}
 	}
