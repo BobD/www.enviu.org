@@ -6,7 +6,9 @@ requirejs.config({
      underscore: 'vendors/underscore/underscore-min',
      home: 'modules/pages/home',
      fastclick: 'vendors/fastclick',
-     slick: 'vendors/slick.min'
+     slick: 'vendors/slick.min',
+     slideout: 'vendors/slideout.min',
+     scrollevents: 'vendors/scrollevents',
   }
 });
 
@@ -15,8 +17,11 @@ require([
 	'jquery',
 	'home',
 	'fastclick',
-	'slick'
-	], function(domReady, $, home, FastClick) {
+	'slideout',
+	'slick',
+	'scrollevents'
+	], function(domReady, $, home, FastClick, Slideout, ScrollEvents) {
+
 		$('html').removeClass('no-js').addClass('js');
 
 		home.init({
@@ -41,70 +46,48 @@ require([
 	  		autoplaySpeed: 5000
 	  	});
 
-	  	// Refer to  scss/helpers/_variables.scss for the breakpoint values
+	  	// Generate the breakpoints for the carrousel
+	  	var startWidth = 600;
+	  	var itemWidth = 248;
+	  	var responsive = [];
+
+	  	for(var a = 0; a < 20; ++a){
+	  		responsive.push({
+		      breakpoint: 600 + (a * itemWidth),
+		      settings: {
+		        slidesToShow: a + 1
+		      }
+	  		});
+	  	}
+
 	  	$('.slick-caroussel').slick({
 		  	lazyLoad: 'ondemand',
 		  	slidesToShow: 4,
 		  	slidesToScroll: 1,
-		  	responsive: [
-			    {
-			      breakpoint: 1024,
-			      settings: {
-			        slidesToShow: 3
-			      }
-			    },
-			   	{
-			      breakpoint: 900,
-			      settings: {
-			        slidesToShow: 2
-			      }
-			    },
-			    {
-			      breakpoint: 600,
-			      settings: {
-			        slidesToShow: 1
-			      }
-			    }
-			  ]
+		  	responsive: responsive
 	  	});
 
-	  	var controller = new ScrollMagic.Controller();
-	  	var effectSections = $('.scroll--effect');
-	  	var section;
 
-	  	for(var a =0; a < effectSections.length; ++a ){
-	  		section = effectSections[a];
+	  	// See Mobile menu, see https://mango.github.io/slideout/
+	  	if($('body').hasClass('main--is-mobile')){
 
-	  		$(section).css({
-	  			top: 150,
-	  			opacity: 0.5
-	  		});
+	  		var slideout = new Slideout({
+		    	'panel': document.getElementById('slideout-panel'),
+		    	'menu': document.getElementById('slideout-menu'),
+		    	'padding': 256,
+		    	'tolerance': 70,
+		    	'side': 'right'
+		  	});
 
-			new ScrollMagic.Scene({
-				triggerElement: section,
-				triggerHook: 1
-		    })
-		    .on("enter", function (event) {
-		    	animateSectionIn($(event.target.triggerElement()));
-			})
-			.on("leave", function (event) {
-				animateSectionOut($(event.target.triggerElement()));
-			})
-		    .addTo(controller);
-	  	}
+		    $('.slideout-toggle').on('click', function(e) {
+		    	e.preventDefault();
+		        slideout.toggle();
 
-	  	function animateSectionIn($section){
-		    $section.animate({
-		    	top: 0,
-		    	opacity: 1
+		        $(this).find('.icon').toggleClass('fa-bars');
+		        $(this).find('.icon').toggleClass('fa-times');
 		    });
-	  	}
 
-	  	function animateSectionOut($section){
-		    $section.animate({
-				top: 100,
-	  			opacity: 0
-		    });
+
 	  	}
 
 	}

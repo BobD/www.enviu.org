@@ -117,6 +117,10 @@
 
 @include respond-to(mobile) {
 
+	html{
+		margin-top: 0 !important;
+	}
+
 	.main{
 
 		&--home{
@@ -133,6 +137,12 @@
 				width: 100%;
 				display: block;
 				margin-left: 0;
+			}
+		}
+
+		&.admin-bar{
+			.wpadminbar{
+				display: none;
 			}
 		}
 
@@ -183,9 +193,12 @@
 			.content{
 				position: relative;
 				background: $white;
-				padding-top: 5em;
-				padding-bottom: 6em;
-				// top: 100vh;
+			}
+
+			.section{
+				&:last-child{
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

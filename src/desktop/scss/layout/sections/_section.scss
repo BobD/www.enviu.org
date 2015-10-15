@@ -34,6 +34,8 @@
 
 	&--streched{
 		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
@@ -83,7 +85,7 @@
 			}
 		}
 
-		&--streched{
+		&--tablet-streched{
 			margin-left: 0;
 			margin-right: 0;
 		}
@@ -117,7 +119,8 @@
 			margin-right: auto;
 		}
 
-		&--streched{
+		&--streched,
+		&--tablet-streched{
 			margin-left: 0;
 			margin-right: 0;
 		}

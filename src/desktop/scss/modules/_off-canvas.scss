@@ -45,4 +45,8 @@
 		color: $white;
 	}
 
+	@include respond-to(mobile) {
+		display: none;
+	}
+
 }

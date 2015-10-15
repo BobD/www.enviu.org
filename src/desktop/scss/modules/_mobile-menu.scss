@@ -1,0 +1,33 @@
+.mobile-menu{
+	background: $theme-dark;
+	padding: $vertical-padding ($horizontal-padding * 2);
+	font-size: 1.2em;
+
+	.header__quicklinks-item{
+		line-height: 3em;
+		float: none;
+	}
+
+	.header__quicklinks-link{
+		padding-left: 0;
+	}
+}
+
+.mobile-menu__navigation{
+	.navigation__item{
+		display: block;
+		float: none;
+		line-height: 3em;
+
+		.navigation__link{
+			padding-left: 0;
+		}
+	}
+}
+
+.mobile-menu__footer{
+	position: absolute;
+	bottom: ($vertical-padding * 2);
+	left: ($horizontal-padding * 2);
+	color: $white;
+}

@@ -6,7 +6,7 @@ figure{
 	> a,
 	> img{
 		float: left;
-		width: 80%;
+		width: 75%;
 		margin-right: 2em;
 		border-radius: 4px;
 	}
@@ -18,13 +18,11 @@ figure{
 		padding: .5em 1em;
 		background: $theme;
 		color: $white;
-		@include setType(3, $base-em-font-size);
 	}
 
 	img{
 		width: 100%;
 		height: auto;
-
 	}
 }
 

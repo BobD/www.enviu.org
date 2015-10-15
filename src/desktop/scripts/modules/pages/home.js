@@ -8,49 +8,108 @@ define(['jquery', 'underscore'], function($, _) {
 
 			module.$container = options.$container;
 
-		  	$(window).on('hashchange', function(e) {
-		  		var hash = location.hash;
-		  		var $target = $(hash);
-		  		$sectionNav.find('.active').removeClass('active');
-		  		$sectionNav.find('a[href="' + hash + '"]').parent().addClass('active');
-			});
+		  	if(!$('body').hasClass('main--is-mobile')){
+				var controller = new ScrollMagic.Controller();
+				var $sectionNav = $('.section-nav');
+			  	var scrollSnapSections = $('.section--scroll-snap');
+			  	var $snapTarget = [];
+			  	var snapInProgress = false;
 
-			$(window).trigger('hashchange');
+			  	$('.leaderboard__scrolldown-link, .section-nav a').on('click', function(e){
+			  		e.preventDefault();
 
-		  	$('.scrolldown--effect').click(function(e){
-		  		e.preventDefault();
-
-		  		var hash = $(this).attr('href')
-		  		var $target = $(hash);
-
-		  		if ($target.length){
-		  		 	$('html,body').animate({
-	          			scrollTop: $target.offset().top
-	        		}, 250, function(){
-	        			window.location.hash = hash;
-	        		});
-		  		}
-		  	});
+			  		$snapTarget = $($(this).attr('href'));
+			  		$(window).trigger('scrollstop');
+			  	});
 
 
-		  	for(var a =0; a < $sectionNavLinks.length; ++a ){
-		  		var $link = $($sectionNavLinks[a]);
-		  		var hash = $link.attr('href');
-		  		var section = $(hash);
+				$(window).bind('scrollstart', function(){
+					if(!snapInProgress){
+						$("html, body").stop();
+					}
+		         });
 
-		  // 		if(section.length > 0){
-		  // 							new ScrollMagic.Scene({
-				// 	triggerElement: section,
-				// 	triggerHook: 1
-			 //    })
-			 //    .on("enter", function (event) {
-			 //    	console.log('enter section', event.target.triggerElement());
-				// })
-				// .on("leave", function (event) {
-				// })
-			 //    .addTo(controller);
-		  // 		}
+				$(window).bind('scrollstop', function(){
+					if(!snapInProgress && $snapTarget.length != 0){
+						snapInProgress = true;
 
+			    		$("html, body").stop().animate({ scrollTop:  $snapTarget.offset().top }, 500, function(){
+			    			snapInProgress = false;
+			    		});
+
+			    		$snapTarget = [];
+					}
+		         });
+
+			  	for(var a =0; a < scrollSnapSections.length; ++a ){
+			  		var section = scrollSnapSections[a];
+
+					new ScrollMagic.Scene({
+						triggerElement: section,
+						triggerHook: 1
+				    })
+				    .on("enter", function (event) {
+				    	$snapTarget = $(event.target.triggerElement());
+						$sectionNav.find('.active').removeClass('active');
+						$sectionNav.find('[href="#' + $snapTarget.attr('id') + '"]').parent().addClass('active');
+					})
+				    .addTo(controller);
+
+				    new ScrollMagic.Scene({
+						triggerElement: section,
+						triggerHook: 0.1
+				    })
+					.on("leave", function (event) {
+						$snapTarget = $(event.target.triggerElement()).prev();
+
+						if($snapTarget.length == 0){
+							$snapTarget = $('html');
+						};
+
+						$sectionNav.find('.active').removeClass('active');
+						$sectionNav.find('[href="#' + $snapTarget.attr('id') + '"]').parent().addClass('active');
+					})
+				    .addTo(controller);
+			  	}
+
+
+			  // 	var effectSections = $('.section--scroll-effect');
+			  // 	var section;
+
+			  // 	for(var a =0; a < effectSections.length; ++a ){
+			  // 		section = effectSections[a];
+
+			  // 		$(section).css({
+			  // 			top: 150,
+			  // 			opacity: 0.5
+			  // 		});
+
+					// new ScrollMagic.Scene({
+					// 	triggerElement: section,
+					// 	triggerHook: 1
+				 //    })
+				 //    .on("enter", function (event) {
+				 //    	animateSectionIn($(event.target.triggerElement()));
+					// })
+					// .on("leave", function (event) {
+					// 	animateSectionOut($(event.target.triggerElement()));
+					// })
+				 //    .addTo(controller);
+			  // 	}
+
+			  // 	function animateSectionIn($section){
+				 //    $section.animate({
+				 //    	top: 0,
+				 //    	opacity: 1
+				 //    });
+			  // 	}
+
+			  // 	function animateSectionOut($section){
+				 //    $section.animate({
+					// 	top: 100,
+			  // 			opacity: 0
+				 //    });
+			  // 	}	
 		  	}
 		}
 	}

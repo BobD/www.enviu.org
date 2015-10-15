@@ -1,5 +1,4 @@
 .article{
-	overflow: hidden;
 
 	&--lead{
 		.article__content{
@@ -21,15 +20,6 @@
 				@include setType(4, $ms-up1);
 			}
 
-			p,
-			> h1,
-			> h2,
-			> h3,
-			> h5,
-			> h6{
-				@extend %container-narrow;
-			}
-
 			> h1,
 			> h2,
 			> h3,
@@ -41,6 +31,12 @@
 			p{
 				margin-bottom: 2em;
 			}
+		}
+
+		figure{
+			margin-left: -4em;
+			margin-right: -4em;
+			width: auto !important;
 		}
 	}
 
@@ -80,6 +76,41 @@
 		img{
 			float: left;
 			margin-right: 2em;
+		}
+	}
+}
+
+@include respond-to(mobile) {
+	.article{
+
+		p{
+			min-width: 0;
+		}
+
+		figure{
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&--page{
+			img{
+				float: none !important;
+				width: 100%;
+				height: auto;
+				display: block;
+				margin: 2em 0 !important;
+			}
+
+			figure{
+				> a{
+					float: none;
+					width: auto;
+				}
+
+				img{
+					margin: 0 !important;
+				}
+			}
 		}
 	}
 }

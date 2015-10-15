@@ -27,7 +27,6 @@ $section-vertical-padding:			3 * $vertical-padding;
 $site-min-width:					600px;
 $site-max-width:					900px;
 $box-ratio:							45%;
-$caroussel__item-padding: 			1em;
 $grid__item-padding:				1em;
 $section-narrow-width:				.66;
 
@@ -54,8 +53,8 @@ $wp-admin-bar-height-plus:			46px;
 // Using em's in case the page get's zoomed in
 // ----
 
-$section-padding-tablet:			2em;
-$section-padding-mobile:			2em;
+$section-padding-tablet:			1em;
+$section-padding-mobile:			1.5em;
 $screen:       						"only screen and";
 $breakpoints: (
   'mobile'  		: '#{$screen} ( max-width: 480px )',

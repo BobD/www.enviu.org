@@ -2,19 +2,21 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" id="leaderboard"> <!--<![endif]-->
 
     {{> sections/meta}}
 
     <body class='main main--home' id='page'>
 
-    	<div class='main__container'>
+    	  {{!-- {{> helpers/mobile-menu}}--}}
+
+    	<div id='slideout-panel' class='main__container'>
 		
 			{{> sections/header active=''}}
 
 			<ul class='section-nav'>
 				<li class='section-nav__item active'>
-					<a class='section-nav__link scrolldown--effect' href='#page'>
+					<a class='section-nav__link scrolldown--effect' href='#leaderboard'>
 						<i class='icon fa fa-dot-circle-o'></i>
 					</a>
 				</li>
@@ -34,7 +36,7 @@
 					</a>
 				</li>
 				<li class='section-nav__item'>
-					<a class='section-nav__link scrolldown--effect' href=''>
+					<a class='section-nav__link scrolldown--effect' href='#people'>
 						<i class='icon fa fa-dot-circle-o'></i>
 					</a>
 				</li>
@@ -44,7 +46,7 @@
 
 	        <main class='content'>
 
-				<section class='section' id='facts'>
+				<section class='section section--scroll-snap section--scroll-effect' id='facts'>
 
 					<div class='section__page-vertical-center'>
 
@@ -66,7 +68,7 @@
 
 	        	</section>
 
-	        	<section class='section section--streched' id='case'>	
+	        	<section class='section section--streched section--scroll-snap section--scroll-effect' id='case'>	
 	        		<div class='section__page-vertical-center'>
 	        			<div class='case'>
 	        				<div class='case__container'>
@@ -90,7 +92,7 @@
 					</div>
 				</section>
 
-	        	<section class='section' id='news'>
+	        	<section class='section section--scroll-snap section--scroll-effect' id='news'>
 
 	        		<div class='section__page-vertical-center'>
 
@@ -140,7 +142,7 @@
 
 				</section>
 
-				<!-- <section class='section section--narrow'>
+				<section class='section section--scroll-snap section--scroll-effect' id='people'>
 
 					<div class='section__page-vertical-center'>
 
@@ -151,48 +153,19 @@
 
 		        		<div class='grid grid--column-4 grid--articles'>
 
-						{{#each content.people}}
-						<div class='grid__item'>
+						{{#each content.people_home}}
+							<div class='grid__item'>
 
-							<div class='grid__item-content'>
-								{{> helpers/cell-people type='people' image=image title=title button_title='Read'}}
-							</div>
-
-						</div>
-						{{/each}}
-
-						<div class='grid__item'>
-
-							<div class='cell cell--people cell--people-you'>
-
-								<header class='cell__header'>
-									<div class='cell__image' src='{{image}}'>
-										<i class='icon fa fa-question'></i>
-									</div>
-								</header>
-
-								<div class='cell__content'>
-
-									<div class='cell__content-container'>
-
-										<div class='cell__title'>You?</div>
-										<div class='cell__body'>
-											If you think you and Enviu are a match, please let us know.
-										</div>
-
-									</div>
-
-									{{> helpers/button title="Go to vancancies" link='' icon='icon-Enviu_icons_pijl_beneden' type='large'}}
-									
+								<div class='grid__item-content'>
+									<img class='cell__image' src='{{image}}' {{#if over_image}}onmouseover="this.src='{{over_image}}'" onmouseout="this.src='{{image}}'"{{/if}}></img>
 								</div>
 
 							</div>
-
-						</div>
+						{{/each}}
 
 					</div>
 
-	        	</section> -->
+	        	</section>
 
 			</main>
 

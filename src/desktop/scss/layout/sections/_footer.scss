@@ -1,6 +1,7 @@
 .footer{
 	color: $white;
 	background-color: $grey;
+	z-index: 10;
 
 	&__social-follow{
 		float: left;
@@ -27,6 +28,7 @@
 			text-align: center;
 		}
 	}
+
 }
 
 .footer__main{
@@ -122,6 +124,11 @@
 }
 
 @include respond-to(mobile) {
+	.footer__main,
+	.footer__sub-container{
+	  	padding-top: 2em;
+		padding-bottom: 2em;
+	}
 
 	.footer__sub-container,
 	.footer__main-container{
@@ -137,7 +144,7 @@
 
 	.footer__item{
 		margin-left: 0;
-		margin-right:4em;
+		margin-right: 1.5em;
 		margin-bottom: 1em;
 	}
 
@@ -145,5 +152,60 @@
 	.footer__adress-right{
 		display: block;
 		margin: 1em 0;
+	}
+
+	.footer__logo{
+	  	height: 5em;
+	  	width: 175px !important;
+	  	margin-left: -1.5em;
+	}
+
+	.footer__social-follow{
+		float: none;
+		display: block;
+		margin-bottom: 1em;
+	}
+
+	.footer__newsletter{
+		width: 100%;
+
+	}
+
+	.newsletter__input{
+		width: 100% !important;
+		margin-bottom: 1em !important;
+	}
+
+	.newsletter__submit{
+	    margin: 0 auto !important;
+    	display: block !important;
+    	border-radius: $border-radius !important;
+	}
+}
+
+
+@include respond-to(tablet) {
+	.footer__sub-container{
+		text-align: left;
+	}
+
+	.footer__social-follow,
+	.footer__newsletter{
+		margin: 1em 0;
+	}
+
+	.footer__social-follow{
+		display: block;
+		float: none;
+	}
+
+	.footer__newsletter{
+		display: block;
+	}
+
+	.footer__address{
+		float: none;
+		top: auto;
+		margin: 3em 0;
 	}
 }

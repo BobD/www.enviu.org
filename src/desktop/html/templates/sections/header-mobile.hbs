@@ -1,0 +1,27 @@
+<header class='header header--mobile'>
+
+	<div class='header__main'>
+
+		<div class='header__main-container'>
+		
+			<a href='index.html' class='header__logo'>
+				Enviu
+			</a>
+
+			<ul class='header__right'>
+				<li>
+					<i class='icon icon-Enviu_icons_vergrootglas'></i>
+				</li>
+				<li class='slideout-toggle'>
+					<i class='icon fa fa-bars'></i>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+</header>
+
+{{#if leaderboard}}
+{{> helpers/leaderboard items=leaderboard}}
+{{/if}}

@@ -1,0 +1,46 @@
+<nav id='slideout-menu' class='mobile-menu'>
+
+	<div class='mobile-menu__navigation'>
+		{{> helpers/navigation active=active}}
+	</div>
+
+	<div class='mobile-menu__quicklinks'>
+		<ul class='header__quicklinks'>
+			<li class='header__quicklinks-item {{#menu_active  'invest' active}}{{/menu_active}}'>
+				<a class='header__quicklinks-link' href='invest.html'>
+					I am an investor
+					<i class='icon icon-Enviu_icons_pijl_rechts'></i>
+				</a>
+			</li>
+			<li class='header__quicklinks-item {{#menu_active 'collaborate' active}}{{/menu_active}}'>
+				<a class='header__quicklinks-link' href='collaborate.html'>
+					I am an entrepreneur
+					<i class='icon icon-Enviu_icons_pijl_rechts'></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class='mobile-menu__footer'>
+		
+		{{!-- Different icons for the header, but keep the markup in sync with helpers/social-follow.hbs template --}}
+		<ul class='social-follow'>
+			<li class='social-follow__item'>
+				<a class='social-follow__link' href=''>
+					<i class='icon icon-Enviu_icons_facebook'></i>
+				</a>
+			</li>
+			<li class='social-follow__item'>
+				<a class='social-follow__link' href=''>
+					<i class='icon icon-Enviu_icons_twitter'></i>
+				</a>
+			</li>
+			<li class='social-follow__item'>
+				<a class='social-follow__link' href=''>
+					<i class='icon icon-Enviu_icons_linkedin'></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+</nav>

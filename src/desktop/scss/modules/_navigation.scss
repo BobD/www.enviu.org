@@ -25,3 +25,16 @@
 	display: block;
 	padding: 0 1.5em;
 }
+
+
+@include respond-to(tablet) {
+	.navigation__link{
+		padding: 0 1em;
+	}
+
+	.navigation__item{
+		&:first-child{
+			margin-left: -1em;
+		}
+	}
+}

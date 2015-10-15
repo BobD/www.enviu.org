@@ -6,6 +6,7 @@
 	border-radius: 4px;
 	display: inline-block;
 	line-height: inherit;
+	font-size: $base-font-size;
 
 	@include bold();
 

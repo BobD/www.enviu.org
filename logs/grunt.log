@@ -6,7 +6,7 @@ Running "clean:desktop" (clean) task
 >> 1 path cleaned.
 
 Running "copy:desktop" (copy) task
-Copied 56 files
+Copied 58 files
 
 Running "data:desktop" (data) task
 
@@ -17,16 +17,16 @@ File build/desktop/css/develop.css created.
 File build/desktop/css/style.css created.
 
 Running "cssmin:desktop" (cssmin) task
-File build/desktop/css/style.min.css created: 51.33 kB → 35.95 kB
+File build/desktop/css/style.min.css created: 54.5 kB → 38.33 kB
 
 Running "html:desktop" (html) task
 
 Running "requirejs:desktop" (requirejs) task
 
 Running "copy:dist" (copy) task
-Copied 89 files
+Copied 91 files
 
 Running "copy:export" (copy) task
-Copied 34 files
+Copied 36 files
 
 Done, without errors.

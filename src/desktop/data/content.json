@@ -117,6 +117,14 @@
 		{"tag": "article", "title": "30 april 2015",  "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",  "url": "", "image": "images/assets/eten_drinken.png"}
 	],
 
+
+	"people_home": [
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_james_kape_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Annemarie Spies", "image": "images/assets/rollover_WHITE_PHOTO_angela_k_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_chris_w_1_portrait.jpg", "over_image": "images/assets/rollover_WHITE_PHOTO_chris_w_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
+		{"title": "Annemarie Spies", "image": "images/assets/SENSIBLE_WHITE_PHOTO_lisa_s_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"}
+	],
+
 	"people": [
 		{"title": "Bart Meijs", "image": "images/assets/SENSIBLE_WHITE_PHOTO_james_kape_1_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},
 		{"title": "Annemarie Spies", "image": "images/assets/rollover_WHITE_PHOTO_angela_k_2_portrait.jpg", "sub_title": "Chief Business", "description": "Development Officer"},

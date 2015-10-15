@@ -21,6 +21,7 @@
     "underscore": "~1.7.0",
     "fastclick": "~1.0.6",
     "picturefill": "~2.3.0",
-    "ScrollMagic": "~2.0.5"
+    "ScrollMagic": "~2.0.5",
+    "slideout.js": "https://github.com/mango/slideout.git#~0.1.9"
   }
 }

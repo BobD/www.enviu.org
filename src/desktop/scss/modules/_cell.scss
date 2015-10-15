@@ -1,6 +1,108 @@
 .cell{
 	background: $grey-lighter;
 	text-align: left;
+	line-height: 1.8em;
+}
+
+.cell,
+.cell__image{
+	border-radius: 6px;
+}
+
+.cell__header{
+	text-align: center;
+}
+
+.cell__image{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	height: 175px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-color:  $theme-dark;
+}
+
+.cell__content{
+	padding: 1.5em 1.5em 1em 1.5em;
+
+	> .button{
+		margin-top: 2em;
+	}
+}
+
+.cell__tag{
+	background: $theme;
+	display: inline-block;
+	padding: 0 .5em;
+	color: $white;
+	text-transform: capitalize;
+	border-radius: 2px;
+	line-height: 1.5em;
+
+	&--blog{
+		background: $cat-blog-color;
+	}
+
+	&--event{
+		background: $cat-event-color;
+	}
+
+	&--article{
+		background: $cat-article-color;
+	}
+
+	&--download{
+		background: $cat-download-color;
+	}
+}
+
+.cell__title{
+	@include setType(6, $ms-up2);
+	@include bold();
+
+	color: $theme;
+	width: 100%;
+  	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.cell__list{
+	min-height: 3.6em;
+}
+
+.cell__list-item{
+
+	.icon,
+	.cell__list-title{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.cell__list-title:first-of-type{
+		color: $theme;
+	}
+
+	.icon{
+		width: 1em;
+		margin-right: .2em;
+	}
+}
+
+.cell__body{
+	margin-top: 1em;
+	min-height: 5em;
+	max-height: 5em;
+	overflow: hidden;
+}
+
+
+// CELL TYPE SPECIFICS
+.cell{
+	background: $grey-lighter;
+	text-align: left;
+	line-height: 1.8em;
 
 	&--clean{
 		background: transparent;
@@ -45,6 +147,18 @@
 	&--project{
 		.cell__title{
 			@include setType(4, $ms-up1);
+			line-height: 2em;
+		}
+	}
+
+
+	&--call{
+		.cell__title{
+			@include setType(4, $ms-up2);
+			height: 6em;
+			white-space: normal;
+			text-overflow: clip;
+			line-height: 1.4em;
 		}
 	}
 
@@ -119,92 +233,4 @@
 			background: $theme;
 		}
 	}
-}
-
-.cell,
-.cell__image{
-	border-radius: 6px;
-}
-
-.cell__header{
-	text-align: center;
-}
-
-.cell__image{
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	height: 175px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	background-color:  $theme-dark;
-}
-
-.cell__content{
-	padding: 1em 1.5em;
-
-	> .button{
-		margin-top: 1em;
-	}
-}
-
-.cell__content-container{
-	min-height: 7 * $ms-up2;
-}
-
-.cell__tag{
-	background: $theme;
-	display: inline-block;
-	padding: 0 .5em;
-	color: $white;
-	text-transform: capitalize;
-	border-radius: 2px;
-	line-height: 1.5em;
-
-	&--blog{
-		background: $cat-blog-color;
-	}
-
-	&--event{
-		background: $cat-event-color;
-	}
-
-	&--article{
-		background: $cat-article-color;
-	}
-
-	&--download{
-		background: $cat-download-color;
-	}
-}
-
-.cell__title{
-	@include setType(6, $ms-up2);
-	color: $theme;
-	font-weight: 700;
-}
-
-.cell__list{
-}
-
-.cell__list-item{
-
-	.icon,
-	.cell__list-title{
-		display: inline-block;
-		vertical-align: middle;
-	}
-
-	.cell__list-title:first-of-type{
-		color: $theme;
-	}
-
-	.icon{
-		width: 1em;
-		margin-right: .2em;
-	}
-}
-
-.cell__body{
-	margin-top: 1em;
 }
