@@ -1,7 +1,8 @@
 .caroussel{
-	height: 20em;
+	height: 18em;
 	margin-left: 4em;
 	margin-right: 4em;
+	@include setType(4, $ms-down1);
 }
 
 .caroussel__item{
@@ -9,7 +10,7 @@
 
 	&:hover{
 		.caroussel__info{
-			top: 5em;
+			top: 3em;
 		}
 	}
 }
@@ -38,7 +39,7 @@
 
 .caroussel__info{
 	z-index: 1;
-	top: 13.5em;
+	top: 12em;
 	background: $grey-lighter;
 	padding: 1em;
 	transition: all $transition-duration;
@@ -66,11 +67,13 @@
 
 .caroussel__info-header{
 	@include setType(4, $ms-up1);
-	font-weight: 700;
+	@include bold();
+
 	width: 100%;
 	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+  	margin-bottom: .2em;
 }
 
 .caroussel__info-list{
@@ -81,21 +84,28 @@
 .caroussel__info-list-item{
 	line-height: 1.4em;
 
-	.icon{
-		margin-right: .3em;
-		font-size: 1.1em;
-	}
-	
 	.icon,
 	span{
 		display: inline-block;
-		vertical-align: middle;
+	}
+	.icon{
+		margin-right: .3em;
+		font-size: 1.1em;
+		vertical-align: sub;
+	}
+
+	&.caroussel__info-list-item--location{
+		span{
+			&:first-of-type{
+				color: $theme;
+			}
+		}
 	}
 }
 
 .caroussel__info-body{
-	@include setType(2.5, $base-em-font-size);
-	height: 3.8 * $base-em-font-size;
+	@include setType(4, $ms-down1);
+	height: 5em;
 	overflow: hidden;
 	margin-bottom: 1em;
 }

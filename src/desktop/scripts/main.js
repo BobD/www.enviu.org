@@ -1,33 +1,25 @@
 requirejs.config({
    paths: {
    	 jquery: 'vendors/jquery/jquery.min',
-   	 domReady: 'modules/helpers/domready',
-   	 text: 'modules/helpers/text',
+   	 domReady: 'vendors/domready',
      underscore: 'vendors/underscore/underscore-min',
-     home: 'modules/pages/home',
      fastclick: 'vendors/fastclick',
      slick: 'vendors/slick.min',
      slideout: 'vendors/slideout.min',
-     scrollevents: 'vendors/scrollevents',
+     scrollevents: 'vendors/scrollevents'
   }
 });
 
 require([
 	'!domReady',
 	'jquery',
-	'home',
 	'fastclick',
 	'slideout',
 	'slick',
-	'scrollevents'
-	], function(domReady, $, home, FastClick, Slideout, ScrollEvents) {
+	], function(domReady, $, FastClick, Slideout) {
+		var isMobile = $('body').hasClass('main--is-mobile');
 
 		$('html').removeClass('no-js').addClass('js');
-
-		home.init({
-			$container: $('body')
-		});
-
 		FastClick.attach(document.body);
 
 		$('.search-open').on('click', function(e){
@@ -35,10 +27,6 @@ require([
 			$('body').toggleClass('main--searchbar');
 		});
 
-		$('a[href="#off-canvas"], a[href="#off-canvas-up"]').on('click', function(e){
-			e.preventDefault();
-			$('body').toggleClass('main--off-canvas');
-		});
 
 	  	$('.slick-leaderboard').slick({
 	  		autoplay: true,
@@ -48,7 +36,7 @@ require([
 
 	  	// Generate the breakpoints for the carrousel
 	  	var startWidth = 600;
-	  	var itemWidth = 248;
+	  	var itemWidth = 300;
 	  	var responsive = [];
 
 	  	for(var a = 0; a < 20; ++a){
@@ -67,10 +55,8 @@ require([
 		  	responsive: responsive
 	  	});
 
-
-	  	// See Mobile menu, see https://mango.github.io/slideout/
-	  	if($('body').hasClass('main--is-mobile')){
-
+	  	if(isMobile){
+			// See Mobile menu, see https://mango.github.io/slideout/
 	  		var slideout = new Slideout({
 		    	'panel': document.getElementById('slideout-panel'),
 		    	'menu': document.getElementById('slideout-menu'),
@@ -87,8 +73,21 @@ require([
 		        $(this).find('.icon').toggleClass('fa-times');
 		    });
 
+		}else{
+			$('a[href="#off-canvas"], a[href="#off-canvas-up"]').on('click', function(e){
+				e.preventDefault();
+				$('body').toggleClass('main--off-canvas');
+			});
 
-	  	}
+			if($('.main').hasClass('main--home')){
+				require(['modules/effects'], function (effects) {
+					effects.init();				
+				});
 
+				require(['modules/scrollsnap'], function (scrollSnap) {
+					scrollSnap.init();				
+				});
+			}
+		}
 	}
 );

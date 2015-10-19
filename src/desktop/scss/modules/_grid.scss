@@ -1,13 +1,11 @@
 %grid-column{
 	.grid__item{
 		height: auto;
-
 		@include box-ratio(100%, '.grid__item-content');
 
 		.grid__item-content{
 			width: auto;
 			height: auto;
-
 			top: $grid__item-padding;
 			right: $grid__item-padding;
 			bottom: $grid__item-padding;

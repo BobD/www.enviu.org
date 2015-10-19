@@ -31,12 +31,6 @@
 			padding-top: 0;
 		}
 
-		.section__page-vertical-center{
-			> .button{
-				margin-top: 6em;
-			}
-		}
-
 		.footer{
 			position: relative;
 		}
@@ -167,7 +161,7 @@
 
 			.leaderboard__header{
 				top: 50%;
-				margin-top: -5em;
+				margin-top: -10em;
 				bottom:  auto;
 
 				.leaderboard__title{
@@ -175,8 +169,11 @@
 				}
 			}
 
-			.section{
+			.content > .section{
 				height: 100vh;
+				padding-top: 5em;
+				margin-top: 0;
+				margin-bottom: 0;
 			}
 
 			.leaderboard{

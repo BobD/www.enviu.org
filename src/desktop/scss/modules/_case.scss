@@ -1,10 +1,19 @@
 .case{
 	text-align: left;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: $theme;
 
-	@include box-ratio(55%, '.case__container');
+	// @include box-ratio(55%, '.case__container');
 }
 
 .case__container{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .case__content,
@@ -14,6 +23,7 @@
 
 .case__visual{
 	float: right;
+	height: 100%;
 }
 
 .case__visual{
@@ -26,8 +36,7 @@
 .case__content{
 	float: left;
 	width: 50%;
-	background: $theme;
-	padding: 3em 5em;
+	padding: 5em;
 
 	img{
 		float: left;

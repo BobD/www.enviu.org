@@ -1,4 +1,3 @@
-/Applications/AMPPS/www/enviu/wp-content/themes/enviutwentyfifteen/
 
 Running "export:desktop" (export) task
 
@@ -6,7 +5,7 @@ Running "clean:desktop" (clean) task
 >> 1 path cleaned.
 
 Running "copy:desktop" (copy) task
-Copied 58 files
+Copied 59 files
 
 Running "data:desktop" (data) task
 
@@ -17,16 +16,16 @@ File build/desktop/css/develop.css created.
 File build/desktop/css/style.css created.
 
 Running "cssmin:desktop" (cssmin) task
-File build/desktop/css/style.min.css created: 54.5 kB → 38.33 kB
+File build/desktop/css/style.min.css created: 59.33 kB → 42.43 kB
 
 Running "html:desktop" (html) task
 
 Running "requirejs:desktop" (requirejs) task
 
 Running "copy:dist" (copy) task
-Copied 91 files
+Copied 92 files
 
 Running "copy:export" (copy) task
-Copied 36 files
+Copied 37 files
 
 Done, without errors.

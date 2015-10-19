@@ -6,7 +6,7 @@ body{
 
 	// https://github.com/ianrose/typesettings
 	font-size: ($base-font-size / 16px) * 100%;
-	@include setLeading(3.5);
+	@include setLeading(4);
 }
 
 @mixin bold(){
@@ -21,7 +21,7 @@ h2{
 
 @include respond-to(tablet) {
 	body{
-		font-size: ($base-font-size / 12px) * 100%;
+		font-size: ($base-font-size / 16px) * 100%;
 		@include setLeading(3.5);
 	}
 }

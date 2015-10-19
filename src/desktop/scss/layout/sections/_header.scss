@@ -8,6 +8,7 @@
 				display: inline-block;
 				vertical-align: middle;
 				margin-right: 1em;
+
 				.icon{
 					font-size: 2em;
 				}
@@ -21,6 +22,7 @@
 }
 
 .header__main{
+	@include setType(3.5, $ms-down1);
 	line-height: 5em;
 	background-color: $theme;
 }
@@ -99,6 +101,8 @@
 
 .header__quicklinks-item{
 	float: right;
+	padding: .1em 0;
+	@include setType(4, $ms-down1);
 
 	&:hover,
 	&.active{
@@ -200,6 +204,6 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 5;
+		z-index: 100;
 	}
 }

@@ -6,6 +6,7 @@
 	visibility: hidden;
 	transition: all $transition-duration;
 	text-align: center;
+	margin-top: -1em;
 
 	.admin-bar &{
 		&,
@@ -23,12 +24,19 @@
 
 	.main--off-canvas &{
 		visibility: visible;
-		height:100%;
+		height: 100%;
+	}
+
+	.section{
+		height: 100%;
+
+		.button{
+			margin-top: 0;
+		}
 	}
 
 	.section__header{
 		color: $white;
-		padding-top: 6em;
 	}
 
 	.cell__header{
@@ -38,9 +46,13 @@
 		}
 	}
 
+	.cell__image{
+		height: 150px;
+	}
+
 	.off-canvas__close{
 		position: absolute;
-		top: 5em;
+		top: 4em;
 		right: 2em;
 		color: $white;
 	}

@@ -34,7 +34,7 @@ define(['jquery'], function (jQuery) {
     };
     
     special.scrollstop = {
-        latency: 500,
+        latency: 100,
         setup: function() {
             
             var timer,

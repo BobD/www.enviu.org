@@ -3,11 +3,17 @@
 	&--lead{
 		.article__content{
 			color: $theme;
-			@include setType(4, $ms-up1);
+			@include setType(5, $ms-up1);
 		}
 	}
 
 	&--page{
+		.article__title{
+			@include setType(6, $ms-up2);
+			color: $theme;
+			margin-bottom: 2em;
+		}
+
 		.article__content{
 			p:first-of-type,
 			> h1,
@@ -17,7 +23,7 @@
 			> h6{
 				color: $theme;
 				font-weight: normal;
-				@include setType(4, $ms-up1);
+				@include setType(5, $ms-up1);
 			}
 
 			> h1,

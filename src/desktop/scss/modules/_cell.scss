@@ -1,7 +1,7 @@
 .cell{
 	background: $grey-lighter;
 	text-align: left;
-	line-height: 1.8em;
+	@include setType(3.5, $ms-down1);
 }
 
 .cell,
@@ -24,10 +24,10 @@
 }
 
 .cell__content{
-	padding: 1.5em 1.5em 1em 1.5em;
+	padding: 1.3em 1.5em 1em 1.3em;
 
 	> .button{
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 }
 
@@ -38,6 +38,7 @@
 	color: $white;
 	text-transform: capitalize;
 	border-radius: 2px;
+	margin-bottom: .3em;
 	line-height: 1.5em;
 
 	&--blog{
@@ -91,9 +92,9 @@
 }
 
 .cell__body{
-	margin-top: 1em;
-	min-height: 5em;
-	max-height: 5em;
+	margin: .5em 0;
+	min-height: 5.5em;
+	max-height: 5.5em;
 	overflow: hidden;
 }
 
@@ -102,7 +103,6 @@
 .cell{
 	background: $grey-lighter;
 	text-align: left;
-	line-height: 1.8em;
 
 	&--clean{
 		background: transparent;
@@ -170,9 +170,8 @@
 
 		.cell__body{
 			color: $theme;
-			font-weight: 700;
 			margin: 0;
-			@include setType(3, $base-em-font-size);
+			@include bold();
 		}
 	}
 
@@ -190,20 +189,27 @@
 		.cell__title{
 			@include setType(4, $ms-up1);
 			color: inherit;
+			margin-bottom: .2em;
 		}
 
 		.cell__body{
 			margin-top: 0;
-			@include setType(3, $base-em-font-size);
+			height: 3em;
+			min-height: 0;
+			max-height: auto;
 		}
 
 		.cell__list{
-			margin-top: .5em;
-			height: 5em;
+			margin-top: 1em;
+			height: 3em;
 		}
 
 		.cell__list-item{
 			color: $theme;
+		}
+
+		.cell__list-title{
+			font-size: 80%;
 		}
 
 		.cell-social{

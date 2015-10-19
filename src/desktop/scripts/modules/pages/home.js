@@ -1,6 +1,7 @@
 define(['jquery', 'underscore'], function($, _) {
 
 	var module = {
+		
 		init: function(options){
 			var $sectionNav = $('.section-nav');
 			var $sectionNavLinks = $('.section-nav__link');

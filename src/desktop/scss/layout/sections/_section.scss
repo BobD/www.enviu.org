@@ -43,8 +43,15 @@
  	position: relative;
   	top: 50%;
   	transform: translateY(-50%);
-  	padding-top: 5em;
   	text-align: center;
+
+  	> .section__header{
+  		margin-bottom: 2em;
+  	}
+
+	> .button{
+		margin-top: 2em;
+	}
 }
 
 .section__header{

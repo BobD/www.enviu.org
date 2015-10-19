@@ -2,6 +2,7 @@
 	list-style: none;
 	color: $theme;
 	margin-bottom: 2em;
+	padding-top: .2em;
 
 	@include setType(4, $ms-up1);
 }
@@ -29,7 +30,6 @@
 	border-radius: 2px;
 	border: thin solid $theme;
 	color: inherit;
-	@include setType(4, $base-em-font-size);
 
 	&.active,
 	&:hover{

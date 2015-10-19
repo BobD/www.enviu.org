@@ -7,8 +7,7 @@
       margin-top: 4.5em;
   }
 
-
-  @include box-ratio(45%, '.leaderboard__content');
+  @include box-ratio(33%, '.leaderboard__content');
 }
 
 .leaderboard__list{
@@ -51,7 +50,7 @@
 
 .leaderboard__scrolldown{
   position: absolute;
-  bottom: 6em;
+  bottom: 7em;
   width: 6em;
   left: 50%;
   margin-left: -3em;
@@ -60,7 +59,7 @@
   transition: all $transition-duration;
 
   .main--off-canvas &{
-    bottom: -6em;
+    bottom: -7em;
   }
 }
 
@@ -76,6 +75,7 @@
     color: $white;
     position: relative;
     font-size: 1em;
+    margin-bottom: .2em;
 
     @include bold();
   }
@@ -85,7 +85,7 @@
   }
 
   .icon{
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 
@@ -112,6 +112,7 @@
 
 .leaderboard__title{
   @include setType(4, $ms-up2);
+  margin-bottom: .3em;
 }
 
 .leaderboard__description{
